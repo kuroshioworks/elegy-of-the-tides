@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>That Day&#x27;s Promise, and the Melody That Found Its Way Back · Elegy of the Tides</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: cover art beside the story on wide screens, stacked on phones; one deep-sea page, language switch on top. */
+:root{
+  --abyss:#06122a; --deep:#0c1f3f; --foam:#ece4d0; --mist:#a9b6c9; --gold:#c9a869; --gold-dim:#8f7746; --line:rgba(201,168,105,.28);
+  --disp:"Cormorant Garamond","Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,serif;
+  --body:"Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 80% at 50% 0%,var(--deep),var(--abyss) 65%) fixed,var(--abyss);color:var(--foam);font-family:var(--body);font-size:16px;line-height:1.85;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px}
+:lang(zh) body,body:lang(zh){font-family:"Noto Serif SC",var(--body)}
+.wrap{max-width:1040px;margin:0 auto}
+.langs{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:28px}
+.langs button{font:inherit;font-size:14px;color:var(--mist);background:none;border:1px solid transparent;border-bottom-color:var(--line);padding:6px 14px;cursor:pointer;letter-spacing:.04em}
+.langs button:hover{color:var(--foam)}
+.langs button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-dim)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,64px);align-items:center}
+.cover{margin:0}
+.cover img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 6px rgba(201,168,105,.06)}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:0 0 6px;color:var(--foam);text-wrap:balance}
+.sub{font-family:var(--disp);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold);margin:0 0 22px}
+.syn{margin:0 0 26px;color:var(--foam);max-width:34em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;padding:11px 22px;text-decoration:none;border:1px solid var(--gold);color:var(--abyss);background:var(--gold);letter-spacing:.03em}
+.btn.alt{background:none;color:var(--gold)}
+a.btn:hover{filter:brightness(1.1)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:default;pointer-events:none}
+.wave{height:14px;margin:56px 0 40px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'><path d='M0 7 Q15 -1 30 7 T60 7 T90 7 T120 7' fill='none' stroke='%23c9a869' stroke-opacity='.55' stroke-width='1.2'/></svg>") repeat-x center}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,34px);margin:0 0 8px;color:var(--gold)}
+.note{color:var(--mist);font-size:14px;margin:0 0 28px;max-width:40em}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 48px}
+.grp h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp ol{list-style:none;margin:0;padding:0}
+.grp li{padding:11px 0;border-bottom:1px solid rgba(201,168,105,.12);min-width:0}
+.grp .lab{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase}
+.grp .ttl{font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.branch{display:inline-block;font-size:12px;color:var(--abyss);background:var(--gold);padding:1px 8px;margin-left:8px;letter-spacing:.06em;vertical-align:2px}
+footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter-spacing:.08em;line-height:1.7}
+footer b{color:var(--gold);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
+@media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+.wrap{max-width:680px}
+.top{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;font-size:14px;margin-bottom:40px;align-items:baseline}
+.top a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.top a:hover,.pn a:hover{border-color:var(--gold)}
+.sw{display:flex;gap:14px;flex-wrap:wrap}
+.sw a{color:var(--mist);border:0}.sw a:hover{color:var(--gold)}.sw b{color:var(--gold);font-weight:600}
+.pn a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.lab2{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+h1{font-size:clamp(30px,6vw,44px);margin:0 0 36px;line-height:1.25}
+.txt p{margin:0 0 1.15em;font-size:18px;line-height:1.95;text-wrap:pretty;overflow-wrap:anywhere}
+.txt .sb{margin:0;height:1.85em}
+.pn{display:grid;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.pn span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+html[lang=ja] body,html[lang=ja] h1{font-family:"Noto Serif JP",serif}
+html[lang=zh] body,html[lang=zh] h1{font-family:"Noto Serif SC",serif}
+html[lang=ko] body,html[lang=ko] h1{font-family:"Noto Serif KR",serif}
+html[lang=zh] .txt p,html[lang=ja] .txt p{line-height:2.05}
+</style><meta name="robots" content="noai,noimageai"></head><body>
+<div class="wrap"><div class="top"><a href="../index.html#en">← Elegy of the Tides</a><nav class="sw" aria-label="Language"><a href="ja/b-afterstory.html" hreflang="ja">日本語</a> <b>English</b> <a href="zh/b-afterstory.html" hreflang="zh">中文</a> <a href="ko/b-afterstory.html" hreflang="ko">한국어</a></nav></div>
+<p class="lab2">Ending B · Sorrow — After Story</p>
+<h1>That Day&#x27;s Promise, and the Melody That Found Its Way Back</h1>
+<div class="txt"><p>They had quietly slipped away from the still-warm suite of the cruise liner, out onto the balcony.</p><p>White spray kicked up by the ship cutting through the night sea, and a sea breeze endlessly cool and soothing, brushed gently over their flushed skin.</p><p>Owen had thrown on one of David's oversized shirts and stood with his elbows propped on the railing, looking up at the night sky.</p><p>The red marks left along his throat and collarbone glowed faintly in the moonlight.</p><p>The lingering echo of fierce passion, and a tenderness that ached, somehow, at the same time.</p><p>Feeling the numbing warmth still lingering deep in his body, Owen let out a soft breath.</p><p>"…You know. Looking out at the sea with you like this feels strange, somehow."</p><p>David walked up behind him and drew his slender waist in close.</p><p>The undeniable warmth of David's body against his back, and the beat of his heart.</p><p>David buried his face in the curve of Owen's neck and breathed deeply, as if confirming, gently, that something fragile was still there.</p><p>"Strange, how?"</p><p>"Mm… I can't really explain it. It just feels like I've been held like this before, looking out at the sea with you, a long, long time ago."</p><p>Owen gave a small, bashful laugh and laid his own hand over David's where it rested on him.</p><p>David's heart gave a hard, sudden lurch.</p><p>An old music box from his family home—one he'd always been strangely drawn to, unable to put it out of his mind, for as long as he could remember.</p><p>Every time he looked at that worn wooden box, a nameless restlessness would pierce his chest, and until that one day in his third year of high school, David had never known why.</p><p>—Owen, having left the rink, sitting alone on the rooftop at sunset, knees drawn up to his chest, crying.</p><p>The instant David saw his shoulders shake with frustration, every memory of a past life came rushing back, as if struck by lightning.</p><p>The image of the beloved man who had dissolved into foam and vanished, right there in his arms.</p><p>The passion and the ache he had carried in silence ever since, careful never to speak of it, so as not to frighten an Owen who held none of those memories.</p><p>Without meaning to, that had swollen into an obsession, surfacing as a fierce, possessive need to never let this person go to anyone else.</p><p class="sb" aria-hidden="true"></p><p>David reached quietly into his pocket and drew out the old, worn music box he had kept with him, inseparable, ever since that day—carried alongside the memory of a past life.</p><p>Its slightly worn corners caught the moonlight, glowing faintly.</p><p>Tonight, the first night they had become one, sharing each other's warmth completely—tonight, David had decided, was the night he would finally hand over this music box he'd carried since that day, and tell him everything.</p><p>"…David? What's that?"</p><p>Without a word, David slowly began to wind the key.</p><p>Tick… tick… A melody slightly out of tune, sorrowful yet crystal clear, achingly familiar, began to drift out on the night sea wind.</p><p>The instant it did, Owen's body went rigid.</p><p>The melody sank from his ears, through his eardrums, down into the very depths of his soul.</p><p>His vision blurred violently, and an overwhelming flood of memory came crashing into his mind.</p><p>—A dark sea. Two legs bursting apart into foam.</p><p>—David's anguished scream, tears streaming, crying, "I wanted to see you so badly I thought I'd lose my mind."</p><p>—The heat of lips joined together on a cold little boat, borrowed from one last miracle.</p><p>—That dawn, when he vanished, leaving behind the words "go back to land," to a man screaming "I love you."</p><p>"Ah— ngh…!"</p><p>Owen pressed a hand to his head and caught his breath sharply.</p><p>A love and an ache so overwhelming his chest felt as if it might tear apart welled up inside him, and fat tears spilled from his eyes, one after another.</p><p>"Owen…?"</p><p>Turning back with unsteady eyes, Owen looked at the face of the man in front of him.</p><p>The captain on the ice. His boyfriend from that year of high school. And, once, the solitary pirate king who had loved him more than anything in the world, and who had wandered the sea, broken, after losing him.</p><p>"…Da…vid…"</p><p>The instant he called that name in a trembling voice, Owen, face a mess of tears, threw his arms around David's neck with all his strength.</p><p>"I'm sorry…! I'm so sorry, David…! I left you alone… made you wait so long… I'm sorry…!!"</p><p>Owen broke down sobbing.</p><p>Tears, centuries' worth of them, spilled from David's eyes as well.</p><p>This time, it was no illusion, no dream.</p><p>David held Owen back, hard enough to break, wrapping his arms around him tightly.</p><p>"Don't apologize… please, don't apologize, Owen."</p><p>Tightening the arms wrapped around his back, David let the words he had kept locked away in his chest, for so, so long, finally spill out in a trembling voice.</p><p>"…I finally found you. I've been searching this whole time… thank you, for coming back to me."</p><p>He cupped Owen's tear-streaked cheeks gently in both hands and looked at him, straight on, face to face.</p><p>Those beloved eyes, now, after centuries, standing before him again with real, undeniable warmth.</p><p>"I love you, Owen. In my past life, and now… and I'll go on loving you with everything I have, for as long as I live."</p><p>"…! David…! I love you too…!"</p><p>As if to pour every overflowing feeling directly into him, David leaned in with all his tenderness and pressed his lips gently to Owen's trembling ones.</p><p>Nothing like that fleeting, sorrowful kiss at dawn in their past life.</p><p>A kiss sweet, deep, and endlessly gentle—one that confirmed each other's warmth, and vowed never to be parted again.</p><p>Feeling the heat passing between their joined lips, Owen clung to David's neck in turn, accepting the kiss through his tears.</p><p>The key wound fully down, and the music box's melody fell quietly silent.</p><p>But nothing would ever stop their time together again.</p><p>On the night sea, a love that had once stood still had, at last, in its truest sense, begun to move forward again.</p></div>
+<nav class="pn" aria-label="Chapter navigation"><div><span>Previous</span><a href="b-epilogue.html">Ending B · Sorrow — Epilogue</a></div><div><span>The end</span><a href="../index.html#en">Back to contents</a></div></nav>
+<footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br>No reproduction, redistribution, translation or use for AI training without permission.</footer></div></body></html>

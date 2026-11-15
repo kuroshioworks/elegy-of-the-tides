@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>あの日の約束と、巡りあう旋律 · Elegy of the Tides</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: cover art beside the story on wide screens, stacked on phones; one deep-sea page, language switch on top. */
+:root{
+  --abyss:#06122a; --deep:#0c1f3f; --foam:#ece4d0; --mist:#a9b6c9; --gold:#c9a869; --gold-dim:#8f7746; --line:rgba(201,168,105,.28);
+  --disp:"Cormorant Garamond","Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,serif;
+  --body:"Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 80% at 50% 0%,var(--deep),var(--abyss) 65%) fixed,var(--abyss);color:var(--foam);font-family:var(--body);font-size:16px;line-height:1.85;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px}
+:lang(zh) body,body:lang(zh){font-family:"Noto Serif SC",var(--body)}
+.wrap{max-width:1040px;margin:0 auto}
+.langs{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:28px}
+.langs button{font:inherit;font-size:14px;color:var(--mist);background:none;border:1px solid transparent;border-bottom-color:var(--line);padding:6px 14px;cursor:pointer;letter-spacing:.04em}
+.langs button:hover{color:var(--foam)}
+.langs button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-dim)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,64px);align-items:center}
+.cover{margin:0}
+.cover img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 6px rgba(201,168,105,.06)}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:0 0 6px;color:var(--foam);text-wrap:balance}
+.sub{font-family:var(--disp);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold);margin:0 0 22px}
+.syn{margin:0 0 26px;color:var(--foam);max-width:34em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;padding:11px 22px;text-decoration:none;border:1px solid var(--gold);color:var(--abyss);background:var(--gold);letter-spacing:.03em}
+.btn.alt{background:none;color:var(--gold)}
+a.btn:hover{filter:brightness(1.1)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:default;pointer-events:none}
+.wave{height:14px;margin:56px 0 40px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'><path d='M0 7 Q15 -1 30 7 T60 7 T90 7 T120 7' fill='none' stroke='%23c9a869' stroke-opacity='.55' stroke-width='1.2'/></svg>") repeat-x center}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,34px);margin:0 0 8px;color:var(--gold)}
+.note{color:var(--mist);font-size:14px;margin:0 0 28px;max-width:40em}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 48px}
+.grp h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp ol{list-style:none;margin:0;padding:0}
+.grp li{padding:11px 0;border-bottom:1px solid rgba(201,168,105,.12);min-width:0}
+.grp .lab{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase}
+.grp .ttl{font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.branch{display:inline-block;font-size:12px;color:var(--abyss);background:var(--gold);padding:1px 8px;margin-left:8px;letter-spacing:.06em;vertical-align:2px}
+footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter-spacing:.08em;line-height:1.7}
+footer b{color:var(--gold);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
+@media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+.wrap{max-width:680px}
+.top{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;font-size:14px;margin-bottom:40px;align-items:baseline}
+.top a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.top a:hover,.pn a:hover{border-color:var(--gold)}
+.sw{display:flex;gap:14px;flex-wrap:wrap}
+.sw a{color:var(--mist);border:0}.sw a:hover{color:var(--gold)}.sw b{color:var(--gold);font-weight:600}
+.pn a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.lab2{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+h1{font-size:clamp(30px,6vw,44px);margin:0 0 36px;line-height:1.25}
+.txt p{margin:0 0 1.15em;font-size:18px;line-height:1.95;text-wrap:pretty;overflow-wrap:anywhere}
+.txt .sb{margin:0;height:1.85em}
+.pn{display:grid;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.pn span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+html[lang=ja] body,html[lang=ja] h1{font-family:"Noto Serif JP",serif}
+html[lang=zh] body,html[lang=zh] h1{font-family:"Noto Serif SC",serif}
+html[lang=ko] body,html[lang=ko] h1{font-family:"Noto Serif KR",serif}
+html[lang=zh] .txt p,html[lang=ja] .txt p{line-height:2.05}
+</style><meta name="robots" content="noai,noimageai"></head><body>
+<div class="wrap"><div class="top"><a href="../../index.html#ja">← Elegy of the Tides</a><nav class="sw" aria-label="Language"><b>日本語</b> <a href="../b-afterstory.html" hreflang="en">English</a> <a href="../zh/b-afterstory.html" hreflang="zh">中文</a> <a href="../ko/b-afterstory.html" hreflang="ko">한국어</a></nav></div>
+<p class="lab2">結末B【哀】　アフターストーリー</p>
+<h1>あの日の約束と、巡りあう旋律</h1>
+<div class="txt"><p>熱の残る客船のスイートルームから、そっと抜け出したバルコニー。</p><p>夜の海を切り裂いて進む船が立てる白い波しぶきと、どこまでも冷たく心地よい潮風が、二人の上気した肌を優しく撫でていく。</p><p>オーウェンはデイビッドの大きめのシャツを羽織り、手すりに肘を預けて夜空を見上げていた。</p><p>首筋や鎖骨に刻まれた赤い痕が、月光に照らされて淡く浮かび上がっている。</p><p>激しい情熱の余韻と、どこか切ないほどの愛おしさ。</p><p>身体の奥に残る痺れるような熱に、オーウェンはふっと息を漏らした。</p><p class="sb" aria-hidden="true"></p><p>「……なんかさ。お前とこうして海見てると、変な感じ」</p><p class="sb" aria-hidden="true"></p><p>後ろから歩み寄ってきたデイビッドが、オーウェンの細い腰をすっと抱き寄せた。</p><p>背中に伝わるデイビッドの確かな体温と胸の鼓動。</p><p>デイビッドはオーウェンの首筋に顔をうずめ、壊れものを確かめるように、深く息を吸い込んだ。</p><p class="sb" aria-hidden="true"></p><p>「変な感じ……って？」</p><p>「うーん……上手く言えないけど。ずっと昔から、こうやってお前に抱きしめられて、海を見てた気がするんだよな」</p><p class="sb" aria-hidden="true"></p><p>オーウェンは照れ隠しに小さく笑うと、重ねられたデイビッドの手に自分の手を重ねた。</p><p>デイビッドの胸が、どくりと大きく跳ねる。</p><p>幼い頃から、なぜか惹かれて離せなかった実家の古いオルゴール。</p><p>擦り減ったその木箱を眺めるたび、胸の奥を突き刺す謎の焦燥感の理由を、デイビッドは高3のあの日まで知らなかった。</p><p>――リンクを去り、夕焼けの学校の屋上で、ただ一人膝を抱えて泣いていたオーウェン。</p><p>悔しさに肩を震わせる彼の涙を見た瞬間、雷に打たれたように前世の全記憶が蘇ったのだ。</p><p>自分の腕の中で泡となって消えていった愛しい男の面影が。</p><p>記憶を持たないオーウェンを驚かせないよう、ずっと告げずに抱え込んできた情熱と切なさ。</p><p>それが無意識のうちに肥大化した執着となり、彼を誰にも渡したくないという強烈な独占欲となって表に出てしまっていたのだ。</p><p class="sb" aria-hidden="true"></p><p>デイビッドは静かにポケットへ手を伸ばし、前世の記憶と共に、いまや片時も離さず守り抜いてきた、あの古びたオルゴールを取り出した。</p><p class="sb" aria-hidden="true"></p><p>少し角が擦り減ったそれが、月光を受けて淡く光る。</p><p class="sb" aria-hidden="true"></p><p>初めてひとつになり、お互いの体温を分け合った今夜こそ、あの日から持ち歩いていたこのオルゴールを渡し、すべてを明かそうと決めていた。</p><p class="sb" aria-hidden="true"></p><p>「……デイビッド？ それ、なに？」</p><p class="sb" aria-hidden="true"></p><p>デイビッドは何も言わず、ゆっくりとネジを巻く。</p><p class="sb" aria-hidden="true"></p><p>チロン……チロン……と、少しだけ音のずれた、哀しくも透き通った懐かしい旋律が、夜の海風に乗って響き始めた。</p><p class="sb" aria-hidden="true"></p><p>その瞬間、オーウェンの身体がぴくりと強張った。</p><p>音色が耳から鼓膜へ、そして魂の奥底へと染み渡っていく。</p><p>視界が急激に歪み、脳裏に途方もない記憶の濁流が押し寄せてきた。</p><p class="sb" aria-hidden="true"></p><p>——暗い海。泡となって弾けていく二本の足。</p><p>——「逢いたくて、狂いそうだった」と、涙を流しながら叫んだデイビッドの悲鳴。</p><p>——冷たい小舟の上で、最後の奇跡を借りて重ねた唇の熱。</p><p>——「愛してる」と叫ぶ男に、「陸へ帰れ」と言い残して消えていったあの夜明け。</p><p class="sb" aria-hidden="true"></p><p>「あ……っ、ぐ……っ」</p><p class="sb" aria-hidden="true"></p><p>オーウェンは頭を押さえ、息を呑んだ。</p><p>胸の奥が張り裂けそうなほどの愛おしさと切なさが溢れ出し、ポロポロと大粒の涙が目からこぼれ落ちる。</p><p>「オーウェン……？」</p><p>揺れる瞳で振り返ったオーウェンは、目の前にいる男の顔を見た。</p><p>氷上のキャプテンであり、高校4年生の恋人でもあり、かつて自分を世界の何よりも愛し、自分を失ってボロボロになりながら海を彷徨い続けた、孤高の海賊王の姿を。</p><p class="sb" aria-hidden="true"></p><p>「……デイ、ビッド……」</p><p class="sb" aria-hidden="true"></p><p>震える声でその名を呼んだ瞬間、オーウェンは涙でグチャグチャの顔のまま、デイビッドの首に力いっぱい抱きついた。</p><p class="sb" aria-hidden="true"></p><p>「ごめん……っ、ごめんな、デイビッド……ッ！ ずっと……一人にして、待たせて……ごめん……っ！！」</p><p class="sb" aria-hidden="true"></p><p>しゃくりあげて泣き出すオーウェン。</p><p>デイビッドの目からも、何百年分もの熱い涙が溢れ出す。</p><p>今度は幻でも、夢でもない。</p><p>オーウェンを、デイビッドは折れるほど強く、強くその腕に抱きしめ返した。</p><p class="sb" aria-hidden="true"></p><p>「謝るな……謝らないでくれ、オーウェン」</p><p class="sb" aria-hidden="true"></p><p>背中に回した大きな手に力を込め、デイビッドは震える声で、ずっとずっと胸の奥に閉じ込めてきた言葉を吐き出す。</p><p class="sb" aria-hidden="true"></p><p>「……ようやく、会えた。ずっと探してたんだ……俺のところに戻ってきてくれて、ありがとう」</p><p class="sb" aria-hidden="true"></p><p>オーウェンの涙に濡れた頬を両手で優しく包み込み、正面からまっすぐに見つめる。</p><p>何百年もの時を越えて、今、確かな熱を持って目の前に存在する愛しい瞳。</p><p class="sb" aria-hidden="true"></p><p>「愛してる、オーウェン。前世も、今も……これからもずっと、俺の命のすべてをかけて愛してる」</p><p>「っ……デイビッドっ…！俺も愛してるっ…！」</p><p class="sb" aria-hidden="true"></p><p>溢れる想いをそのまま伝えるように、デイビッドは愛おしさを込めて、オーウェンの震える唇にそっと己の唇を重ねた。</p><p>前世の夜明け、あの一瞬の悲しい接吻とは違う。</p><p>お互いの温かな体温を確かめ合い、二度と離れないことを誓い合うような、甘く、深く、どこまでも優しいキス。</p><p>重なる唇から伝わる熱に、オーウェンもまたデイビッドの首元にしがみつき、涙を流しながらその口付けを受け入れたのだった。</p><p>ネジが回りきり、オルゴールの音色が静かに止まる。</p><p>けれど、もう二度と二人の時間を止めるものはなかった。</p><p class="sb" aria-hidden="true"></p><p>夜の海の上、止まっていた二人の恋が、本当の意味で今走り出したのだった。</p></div>
+<nav class="pn" aria-label="Chapter navigation"><div><span>前へ</span><a href="b-epilogue.html">結末B【哀】　エピローグ</a></div><div><span>おわり</span><a href="../../index.html#ja">目次へ戻る</a></div></nav>
+<footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br>本作品の無断転載・再配布・翻訳・AI学習への利用を禁じます。</footer></div></body></html>

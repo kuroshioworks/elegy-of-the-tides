@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Two Names, and an Unknown World · Elegy of the Tides</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: cover art beside the story on wide screens, stacked on phones; one deep-sea page, language switch on top. */
+:root{
+  --abyss:#06122a; --deep:#0c1f3f; --foam:#ece4d0; --mist:#a9b6c9; --gold:#c9a869; --gold-dim:#8f7746; --line:rgba(201,168,105,.28);
+  --disp:"Cormorant Garamond","Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,serif;
+  --body:"Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 80% at 50% 0%,var(--deep),var(--abyss) 65%) fixed,var(--abyss);color:var(--foam);font-family:var(--body);font-size:16px;line-height:1.85;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px}
+:lang(zh) body,body:lang(zh){font-family:"Noto Serif SC",var(--body)}
+.wrap{max-width:1040px;margin:0 auto}
+.langs{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:28px}
+.langs button{font:inherit;font-size:14px;color:var(--mist);background:none;border:1px solid transparent;border-bottom-color:var(--line);padding:6px 14px;cursor:pointer;letter-spacing:.04em}
+.langs button:hover{color:var(--foam)}
+.langs button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-dim)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,64px);align-items:center}
+.cover{margin:0}
+.cover img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 6px rgba(201,168,105,.06)}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:0 0 6px;color:var(--foam);text-wrap:balance}
+.sub{font-family:var(--disp);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold);margin:0 0 22px}
+.syn{margin:0 0 26px;color:var(--foam);max-width:34em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;padding:11px 22px;text-decoration:none;border:1px solid var(--gold);color:var(--abyss);background:var(--gold);letter-spacing:.03em}
+.btn.alt{background:none;color:var(--gold)}
+a.btn:hover{filter:brightness(1.1)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:default;pointer-events:none}
+.wave{height:14px;margin:56px 0 40px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'><path d='M0 7 Q15 -1 30 7 T60 7 T90 7 T120 7' fill='none' stroke='%23c9a869' stroke-opacity='.55' stroke-width='1.2'/></svg>") repeat-x center}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,34px);margin:0 0 8px;color:var(--gold)}
+.note{color:var(--mist);font-size:14px;margin:0 0 28px;max-width:40em}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 48px}
+.grp h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp ol{list-style:none;margin:0;padding:0}
+.grp li{padding:11px 0;border-bottom:1px solid rgba(201,168,105,.12);min-width:0}
+.grp .lab{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase}
+.grp .ttl{font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.branch{display:inline-block;font-size:12px;color:var(--abyss);background:var(--gold);padding:1px 8px;margin-left:8px;letter-spacing:.06em;vertical-align:2px}
+footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter-spacing:.08em;line-height:1.7}
+footer b{color:var(--gold);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
+@media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+.wrap{max-width:680px}
+.top{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;font-size:14px;margin-bottom:40px;align-items:baseline}
+.top a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.top a:hover,.pn a:hover{border-color:var(--gold)}
+.sw{display:flex;gap:14px;flex-wrap:wrap}
+.sw a{color:var(--mist);border:0}.sw a:hover{color:var(--gold)}.sw b{color:var(--gold);font-weight:600}
+.pn a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.lab2{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+h1{font-size:clamp(30px,6vw,44px);margin:0 0 36px;line-height:1.25}
+.txt p{margin:0 0 1.15em;font-size:18px;line-height:1.95;text-wrap:pretty;overflow-wrap:anywhere}
+.txt .sb{margin:0;height:1.85em}
+.pn{display:grid;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.pn span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+html[lang=ja] body,html[lang=ja] h1{font-family:"Noto Serif JP",serif}
+html[lang=zh] body,html[lang=zh] h1{font-family:"Noto Serif SC",serif}
+html[lang=ko] body,html[lang=ko] h1{font-family:"Noto Serif KR",serif}
+html[lang=zh] .txt p,html[lang=ja] .txt p{line-height:2.05}
+</style><meta name="robots" content="noai,noimageai"></head><body>
+<div class="wrap"><div class="top"><a href="../index.html#en">← Elegy of the Tides</a><nav class="sw" aria-label="Language"><a href="ja/ch2.html" hreflang="ja">日本語</a> <b>English</b> <a href="zh/ch2.html" hreflang="zh">中文</a> <a href="ko/ch2.html" hreflang="ko">한국어</a></nav></div>
+<p class="lab2">Chapter Two</p>
+<h1>Two Names, and an Unknown World</h1>
+<div class="txt"><p>Given human legs, Owen had been laid out on the lavish bed in the captain's cabin.</p><p>Everything about it was different from when he had been a merman.</p><p>His two legs felt strangely light and unsteady; whenever he tried to stand, his knees gave way beneath him, refusing to hold his weight.</p><p>Worse still, even the loose white shirt he'd been dressed in felt uncomfortably vivid against his skin—every brush of the fabric an unfamiliar, unwelcome sensation.</p><p>"…Damn it… this is ridiculous…!"</p><p>Bang! He slammed his fist against the bedframe.</p><p>At that moment, David stepped in, carrying a tray of steaming food.</p><p>"You're awake."</p><p>"'You're awake,' my ass!! I can't even stand up! Do something about these legs, you damn pirate!!"</p><p>Owen barked at him with all the ferocity he could muster, but David's expression didn't so much as flicker as he sat down on the edge of the bed.</p><p>He set the tray on a nearby table and began arranging the fragrant roasted meat and other dishes onto a plate.</p><p>"Here. Eat."</p><p>"I told you I don't want it!! …Wait, what kind of meat is that anyway?! It better not be fish! If that's one of my people, I'll kill you!!"</p><p>Owen eyed the plate with genuine suspicion, brow furrowed—and David's mouth eased into the faintest hint of a smile.</p><p>"Relax. It's pork, from the land. …Not one of your kind."</p><p>"…Fine, I guess. But what if it's poisoned?"</p><p>"If I meant to poison you, I'd have killed you from the start. …Open your mouth."</p><p>David's voice was low, and it left no room for refusal.</p><p>Owen tried to pull back and escape, but David's free hand caught him by the waist and drew him effortlessly onto his own lap.</p><p>"Wha—?! Let go, idiot! Why are you holding me like this?!"</p><p>"Stop struggling. It'll strain your legs."</p><p>"You didn't even ask if I wanted to sit here in the first place!!"</p><p>Owen's face flushed red to the tips of his ears.</p><p>The feel of the pirate king's hard thighs and chest beneath him, the scent of tobacco and salt drifting from his collar—wrapped in that overwhelming warmth, Owen found it hard to breathe.</p><p>"…Come to think of it, I never asked your name. I'm David."</p><p>"…Like I care. Don't just introduce yourself without being asked."</p><p>Owen turned away with a huff.</p><p>But David's large hand caught his chin and gently guided his face back around.</p><p>"My name is David. …And yours?"</p><p>"…! It's Owen! Owen Silverman! Happy now?!"</p><p>"…Owen Silverman. A good name."</p><p>David's eyes narrowed with quiet satisfaction as he cut a bite-sized piece of meat with his fork and held it out to Owen's lips.</p><p>"Eat, Owen. …If you won't, I'll feed it to you the same way I gave you the medicine."</p><p>"…! Don't be ridiculous!! Fine, I'll eat it, I'll eat it!!"</p><p>Reluctantly, Owen opened his mouth and bit down on the meat.</p><p>At the rich, unfamiliar flavor of his first taste of food from the land, his eyes widened for just a moment.</p><p>"…Mm… this is actually good…"</p><p>"Is it. Then eat more."</p><p>Owen chewed away, cheeks puffed out like a squirrel's, as David watched him with an intensity in his usually icy eyes—something faintly, unmistakably fond.</p><p>Just then—</p><p>Hushed voices leaked in through the crack of the door.</p><p>"Hey, are you seeing this… Captain David, of all people…"</p><p>"No way—he's cutting the meat into bite-sized pieces for him…"</p><p>"'Owen Silverman, huh—a good name,' he says! Whoo-hoo!"</p><p>Peering through the gap were his crew—the hulking, gorilla-like pirates.</p><p>Arms crossed over their log-thick biceps, they grinned as they watched their captain's uncharacteristically tender care.</p><p>"Hey, you!! Quit peeking, you bunch of gorillas!! I'll bite your heads off!!"</p><p>Owen shouted, and David slowly turned his head toward the door.</p><p>"…You have three seconds to disappear. Or you'll be scrubbing the hull with your bare hands until we reach the next port."</p><p>"Eek!! Sorry to intrude!!"</p><p>The gorilla-pirates fled in a screaming, headlong scramble.</p><p>As their clattering footsteps faded into the distance, Owen let out an exasperated sigh.</p><p>"…Honestly, what is with those guys… all that muscle and no nerve…"</p><p>"…That's not your concern."</p><p>David said it quietly, then gently wiped a smear of sauce from the corner of Owen's mouth with his fingertip.</p><p>At the same time, the arm holding him tightened just slightly, as if to make sure he couldn't get away.</p><p>Clumsy. One-sided. And yet—handled with a warmth careful enough for something fragile.</p><p>Even as he muttered "let go" under his breath, Owen couldn't quite bring himself to resist the strange calm that settled over him in the warmth of that chest.</p><p class="sb" aria-hidden="true"></p><p>A few days later, the ship put in at a lively port town.</p><p>After days of practicing, Owen had finally learned to walk—unsteadily—on his own two feet, and David wrapped him in a black cloak and led him out onto the streets.</p><p>"Hey, David. Where are we going?"</p><p>"To buy supplies. …Don't wander off."</p><p>With that, David took Owen's hand in his own broad, calloused one and held it firmly.</p><p>"H-hey! Don't hold my hand! I'm not a kid!"</p><p>"If you'd rather I carried you instead, that can be arranged."</p><p>"…Damn it."</p><p>Owen turned his face away with a huff.</p><p>But the moment he set foot in the port town, all his sullenness vanished in an instant.</p><p>The market overflowed with vivid, colorful fruits, the smell of freshly baked bread, and glittering glasswork and fabrics unlike anything he had ever seen.</p><p>"Wh—what is this?! Paper that doesn't dissolve in water?! And what's this red fruit?!"</p><p>"That's an apple. …Want to try it?"</p><p>David bought one and handed it to him. Owen bit straight into it, and juice burst across his tongue.</p><p>"Whoa—! It's sweet!! What is this, it's amazing!!"</p><p>Owen's eyes sparkled with delight.</p><p>Here was a vibrancy, a richness of color, a deliciousness he had never encountered at the bottom of the sea.</p><p>For all his prickliness, he couldn't hide his curiosity, and the way his eyes darted eagerly from stall to stall made him look, from any angle, utterly innocent and endearing.</p><p>David watched his profile with something close to open adoration.</p><p>"Hey, David! What's that?!"</p><p>"…That's a music box. It makes sound."</p><p>David wound the key, and a beautiful melody drifted out. Owen's eyes went wide with wonder as he stared at it, transfixed.</p><p>Without hesitation, David bought the music box with a gold coin and pressed it into Owen's hands.</p><p>"Here."</p><p>"Huh?! Why? I didn't ask for it!"</p><p>"You seemed to like it. If you don't want it, I'll throw it away."</p><p>"…Don't you dare throw it away, idiot! I'll take it!"</p><p>Owen clutched the music box to his chest like a treasure, then turned away to hide his embarrassment.</p><p>"…Thanks, David."</p><p>A small, mumbled word of thanks.</p><p>Something warm filled David's chest.</p><p>On the way back, they walked side by side, watching the sea burn crimson with the sunset.</p><p>"…The land's not as bad as I thought it'd be."</p><p>"Is that so. Then there's still plenty more I want to show you."</p><p>David tightened his grip on Owen's hand, and this time, Owen didn't pull away—he simply, quietly, held on in return.</p><p>A sweet and quiet time, belonging only to the two of them, had truly begun to flow between them.</p><p>Neither of them had any way of knowing yet that the footsteps of a coming storm were already drawing near.</p></div>
+<nav class="pn" aria-label="Chapter navigation"><div><span>Previous</span><a href="ch1.html">Chapter One</a></div><div><span>Next</span><a href="ch3.html">Chapter Three</a></div></nav>
+<footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br>No reproduction, redistribution, translation or use for AI training without permission.</footer></div></body></html>

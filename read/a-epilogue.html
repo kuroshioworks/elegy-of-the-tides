@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Three Years, and a Golden Sea · Elegy of the Tides</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: cover art beside the story on wide screens, stacked on phones; one deep-sea page, language switch on top. */
+:root{
+  --abyss:#06122a; --deep:#0c1f3f; --foam:#ece4d0; --mist:#a9b6c9; --gold:#c9a869; --gold-dim:#8f7746; --line:rgba(201,168,105,.28);
+  --disp:"Cormorant Garamond","Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,serif;
+  --body:"Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 80% at 50% 0%,var(--deep),var(--abyss) 65%) fixed,var(--abyss);color:var(--foam);font-family:var(--body);font-size:16px;line-height:1.85;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px}
+:lang(zh) body,body:lang(zh){font-family:"Noto Serif SC",var(--body)}
+.wrap{max-width:1040px;margin:0 auto}
+.langs{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:28px}
+.langs button{font:inherit;font-size:14px;color:var(--mist);background:none;border:1px solid transparent;border-bottom-color:var(--line);padding:6px 14px;cursor:pointer;letter-spacing:.04em}
+.langs button:hover{color:var(--foam)}
+.langs button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-dim)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,64px);align-items:center}
+.cover{margin:0}
+.cover img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 6px rgba(201,168,105,.06)}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:0 0 6px;color:var(--foam);text-wrap:balance}
+.sub{font-family:var(--disp);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold);margin:0 0 22px}
+.syn{margin:0 0 26px;color:var(--foam);max-width:34em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;padding:11px 22px;text-decoration:none;border:1px solid var(--gold);color:var(--abyss);background:var(--gold);letter-spacing:.03em}
+.btn.alt{background:none;color:var(--gold)}
+a.btn:hover{filter:brightness(1.1)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:default;pointer-events:none}
+.wave{height:14px;margin:56px 0 40px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'><path d='M0 7 Q15 -1 30 7 T60 7 T90 7 T120 7' fill='none' stroke='%23c9a869' stroke-opacity='.55' stroke-width='1.2'/></svg>") repeat-x center}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,34px);margin:0 0 8px;color:var(--gold)}
+.note{color:var(--mist);font-size:14px;margin:0 0 28px;max-width:40em}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 48px}
+.grp h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp ol{list-style:none;margin:0;padding:0}
+.grp li{padding:11px 0;border-bottom:1px solid rgba(201,168,105,.12);min-width:0}
+.grp .lab{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase}
+.grp .ttl{font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.branch{display:inline-block;font-size:12px;color:var(--abyss);background:var(--gold);padding:1px 8px;margin-left:8px;letter-spacing:.06em;vertical-align:2px}
+footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter-spacing:.08em;line-height:1.7}
+footer b{color:var(--gold);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
+@media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+.wrap{max-width:680px}
+.top{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;font-size:14px;margin-bottom:40px;align-items:baseline}
+.top a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.top a:hover,.pn a:hover{border-color:var(--gold)}
+.sw{display:flex;gap:14px;flex-wrap:wrap}
+.sw a{color:var(--mist);border:0}.sw a:hover{color:var(--gold)}.sw b{color:var(--gold);font-weight:600}
+.pn a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.lab2{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+h1{font-size:clamp(30px,6vw,44px);margin:0 0 36px;line-height:1.25}
+.txt p{margin:0 0 1.15em;font-size:18px;line-height:1.95;text-wrap:pretty;overflow-wrap:anywhere}
+.txt .sb{margin:0;height:1.85em}
+.pn{display:grid;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.pn span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+html[lang=ja] body,html[lang=ja] h1{font-family:"Noto Serif JP",serif}
+html[lang=zh] body,html[lang=zh] h1{font-family:"Noto Serif SC",serif}
+html[lang=ko] body,html[lang=ko] h1{font-family:"Noto Serif KR",serif}
+html[lang=zh] .txt p,html[lang=ja] .txt p{line-height:2.05}
+</style><meta name="robots" content="noai,noimageai"></head><body>
+<div class="wrap"><div class="top"><a href="../index.html#en">← Elegy of the Tides</a><nav class="sw" aria-label="Language"><a href="ja/a-epilogue.html" hreflang="ja">日本語</a> <b>English</b> <a href="zh/a-epilogue.html" hreflang="zh">中文</a> <a href="ko/a-epilogue.html" hreflang="ko">한국어</a></nav></div>
+<p class="lab2">Ending A · Love — Epilogue</p>
+<h1>Three Years, and a Golden Sea</h1>
+<div class="txt"><p>Three years had passed since Owen vanished.</p><p>The pirate ship Black Grouse had, by now, become a legendary vessel that ruled all seven seas.</p><p>And David had kept his promise.</p><p>He had forged an accord with Ludwig, the merfolk's kingdom, and built—just as he had once vowed to Owen—a world where humans and merfolk could coexist.</p><p>Morgan, too, had come to recognize David's sincerity and the depth of his love for Owen, and the two of them had grown into a relationship of mutual respect.</p><p>But the light never returned to David's eyes.</p><p>In his effort to bring Owen back, David had worked alongside Morgan, searching through every record they could find, until at last they uncovered an old text among the merfolk's ancient lore. It read: "An elegy offered for the sake of true love does not extinguish the soul—it becomes a purification, a rite of rebirth into human form."</p><p>"But for a soul turned to foam to take on flesh again, it requires both the depth of love from the one it was offered to, and the full passage of three years' time…"</p><p>From that day on, for three unbroken years, David never once gave up. Every day, in the very waters where Owen had vanished, he wound the key of that little music box.</p><p>"Captain… the waves are calm again today."</p><p>The gorilla-pirates watched over him gently.</p><p class="sb" aria-hidden="true"></p><p>That was when it happened.</p><p>As if in time with the music box's gentle, plinking melody, the calm, golden surface of the sea rippled softly, lifting tiny motes of light.</p><p>"…! ?"</p><p>David caught his breath and rushed to the ship's railing.</p><p>From within the sea, bathed in golden evening light, a young man slowly lifted his face above the surface.</p><p>Beautiful golden hair. Supple skin, beaded with droplets of water.</p><p>And—</p><p>Swaying beneath the water were two smooth, beautiful human legs.</p><p>The young man narrowed his eyes against the glare, looked up at David standing on the deck, and broke into a fierce, endearing grin.</p><p>"…Hey, you damn pirate. …You're late. Took you long enough to come get me."</p><p>"…Ow… Owen…?!"</p><p>David's eyes went wide.</p><p>A life offered up in an elegy, and the miracle of three years of love, held fast on both sides.</p><p>Owen had come back to him—as a fully human man.</p><p>"…! Owen…!!"</p><p>Without a moment's hesitation, David dove from the deck into the golden sea and pulled Owen into a crushing embrace.</p><p>The unmistakable warmth against his hands.</p><p>The feel of wet skin.</p><p>This was no illusion.</p><p>"H-hey, easy, would you… I can't breathe…!"</p><p>David only tightened his arms further, burying his face in the curve of Owen's neck.</p><p>"…That day… I never said it."</p><p>"…What?"</p><p>David loosened his arms just slightly, and without bothering to wipe away the tears streaking his face, looked at Owen with eyes utterly sincere and direct.</p><p>"I love you, Owen."</p><p>A confession so plain, so desperately earnest, from a man who never once allowed himself such tender words.</p><p>"Losing you taught me more than I ever wanted to know. No view in this entire world means anything to me if you're not beside me to see it."</p><p>Owen's eyes went wide for a moment—then his face flushed red, and he laughed, a little bashfully.</p><p>"Look at you, acting all cool… when you were the one bawling and clinging to me while I was disappearing."</p><p>Owen grinned mischievously, but his eyes were brimming with love.</p><p>He leaned in and pressed his cheek gently against David's.</p><p>"…You'd better take responsibility for this. I'm going to see every view in the world right by your side—so stay with me. Forever."</p><p>Rather than answer in words, David let out a quiet breath and simply gazed at the person in front of him with open adoration, as if to say he'd never let him go anywhere, ever again.</p><p>His large hand came up to cradle Owen's cheek, stroking it with tenderness.</p><p>The skin beneath his palm was soft and warm—nothing like the bubble of light that had slipped through his fingers and vanished that day.</p><p>Their lips came together as if falling into place, and Owen caught his breath, just slightly.</p><p>What began as a light, quiet kiss deepened slowly, as though confirming that this was real.</p><p>Their breaths mingled, and even the sound of the waves seemed to fade into the distance.</p><p>It was a kiss that poured everything into it at once—the words he'd never said that day, and the fierce, desperate refusal to ever lose him again.</p><p class="sb" aria-hidden="true"></p><p>Up on the deck, the gorilla-pirates were sobbing and cheering, shouting "THANK GOODNESS!!" at the top of their lungs.</p><p>Morgan, who had come to visit the ship, wiped his eyes, watched the two of them with a warm smile, and offered a quiet round of applause in celebration.</p><p>Across the vast ocean, the sun sank slowly toward the horizon.</p><p>And there, aboard the black pirate ship, the story of two men's endless love rang out, carried by the sound of the tide, echoing on without end.</p><p>Fin</p></div>
+<nav class="pn" aria-label="Chapter navigation"><div><span>Previous</span><a href="ch4.html">Chapter Four</a></div><div><span>The end</span><a href="../index.html#en">Back to contents</a></div></nav>
+<footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br>No reproduction, redistribution, translation or use for AI training without permission.</footer></div></body></html>

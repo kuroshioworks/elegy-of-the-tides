@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>그날의 약속과 다시 만난 선율 · Elegy of the Tides</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: cover art beside the story on wide screens, stacked on phones; one deep-sea page, language switch on top. */
+:root{
+  --abyss:#06122a; --deep:#0c1f3f; --foam:#ece4d0; --mist:#a9b6c9; --gold:#c9a869; --gold-dim:#8f7746; --line:rgba(201,168,105,.28);
+  --disp:"Cormorant Garamond","Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,serif;
+  --body:"Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 80% at 50% 0%,var(--deep),var(--abyss) 65%) fixed,var(--abyss);color:var(--foam);font-family:var(--body);font-size:16px;line-height:1.85;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px}
+:lang(zh) body,body:lang(zh){font-family:"Noto Serif SC",var(--body)}
+.wrap{max-width:1040px;margin:0 auto}
+.langs{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:28px}
+.langs button{font:inherit;font-size:14px;color:var(--mist);background:none;border:1px solid transparent;border-bottom-color:var(--line);padding:6px 14px;cursor:pointer;letter-spacing:.04em}
+.langs button:hover{color:var(--foam)}
+.langs button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-dim)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,64px);align-items:center}
+.cover{margin:0}
+.cover img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 6px rgba(201,168,105,.06)}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:0 0 6px;color:var(--foam);text-wrap:balance}
+.sub{font-family:var(--disp);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold);margin:0 0 22px}
+.syn{margin:0 0 26px;color:var(--foam);max-width:34em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;padding:11px 22px;text-decoration:none;border:1px solid var(--gold);color:var(--abyss);background:var(--gold);letter-spacing:.03em}
+.btn.alt{background:none;color:var(--gold)}
+a.btn:hover{filter:brightness(1.1)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:default;pointer-events:none}
+.wave{height:14px;margin:56px 0 40px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'><path d='M0 7 Q15 -1 30 7 T60 7 T90 7 T120 7' fill='none' stroke='%23c9a869' stroke-opacity='.55' stroke-width='1.2'/></svg>") repeat-x center}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,34px);margin:0 0 8px;color:var(--gold)}
+.note{color:var(--mist);font-size:14px;margin:0 0 28px;max-width:40em}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 48px}
+.grp h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp ol{list-style:none;margin:0;padding:0}
+.grp li{padding:11px 0;border-bottom:1px solid rgba(201,168,105,.12);min-width:0}
+.grp .lab{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase}
+.grp .ttl{font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.branch{display:inline-block;font-size:12px;color:var(--abyss);background:var(--gold);padding:1px 8px;margin-left:8px;letter-spacing:.06em;vertical-align:2px}
+footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter-spacing:.08em;line-height:1.7}
+footer b{color:var(--gold);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
+@media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+.wrap{max-width:680px}
+.top{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;font-size:14px;margin-bottom:40px;align-items:baseline}
+.top a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.top a:hover,.pn a:hover{border-color:var(--gold)}
+.sw{display:flex;gap:14px;flex-wrap:wrap}
+.sw a{color:var(--mist);border:0}.sw a:hover{color:var(--gold)}.sw b{color:var(--gold);font-weight:600}
+.pn a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.lab2{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+h1{font-size:clamp(30px,6vw,44px);margin:0 0 36px;line-height:1.25}
+.txt p{margin:0 0 1.15em;font-size:18px;line-height:1.95;text-wrap:pretty;overflow-wrap:anywhere}
+.txt .sb{margin:0;height:1.85em}
+.pn{display:grid;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.pn span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+html[lang=ja] body,html[lang=ja] h1{font-family:"Noto Serif JP",serif}
+html[lang=zh] body,html[lang=zh] h1{font-family:"Noto Serif SC",serif}
+html[lang=ko] body,html[lang=ko] h1{font-family:"Noto Serif KR",serif}
+html[lang=zh] .txt p,html[lang=ja] .txt p{line-height:2.05}
+</style><meta name="robots" content="noai,noimageai"></head><body>
+<div class="wrap"><div class="top"><a href="../../index.html#ko">← Elegy of the Tides</a><nav class="sw" aria-label="Language"><a href="../ja/b-afterstory.html" hreflang="ja">日本語</a> <a href="../b-afterstory.html" hreflang="en">English</a> <a href="../zh/b-afterstory.html" hreflang="zh">中文</a> <b>한국어</b></nav></div>
+<p class="lab2">엔딩 B 「슬픔」　애프터 스토리</p>
+<h1>그날의 약속과 다시 만난 선율</h1>
+<div class="txt"><p>열기가 가시지 않은 객선의 스위트룸에서 살며시 빠져나온 발코니.</p><p>밤바다를 가르며 나아가는 배가 일으키는 하얀 물보라와, 끝없이 차갑고 기분 좋은 바닷바람이 두 사람의 달아오른 살결을 부드럽게 쓸어 주고 있었다.</p><p>오언은 데이비드의 넉넉한 셔츠를 걸치고, 난간에 팔꿈치를 얹은 채 밤하늘을 올려다보고 있었다.</p><p>목덜미와 쇄골에 새겨진 붉은 자국이 달빛을 받아 희미하게 떠올랐다.</p><p>격렬한 열정의 여운과, 어딘가 애틋할 만큼의 사랑스러움.</p><p>몸 깊은 곳에 남은 저릿한 열기에, 오언은 후우 숨을 내쉬었다.</p><p class="sb" aria-hidden="true"></p><p>"……뭐랄까. 너랑 이렇게 바다를 보고 있으니까, 이상한 기분이야."</p><p class="sb" aria-hidden="true"></p><p>뒤에서 다가온 데이비드가 오언의 가느다란 허리를 슥 끌어안았다.</p><p>등으로 전해지는 데이비드의 확실한 체온과 가슴의 고동.</p><p>데이비드는 오언의 목덜미에 얼굴을 묻고, 깨지기 쉬운 것을 확인하듯 깊게 숨을 들이마셨다.</p><p class="sb" aria-hidden="true"></p><p>"이상한 기분……이라니?"</p><p>"으음……잘 설명은 못 하겠는데. 아주 오래전부터 이렇게 너한테 안겨서 바다를 봤던 것 같아."</p><p class="sb" aria-hidden="true"></p><p>오언은 쑥스러움을 감추려 작게 웃고는, 겹쳐진 데이비드의 손 위에 자신의 손을 포갰다.</p><p>데이비드의 가슴이 쿵, 크게 뛰었다.</p><p>어릴 적부터 왜인지 끌려서 놓을 수 없었던, 본가의 낡은 오르골.</p><p>닳아 해진 그 나무 상자를 바라볼 때마다 가슴 깊은 곳을 찌르던 알 수 없는 초조함의 이유를, 데이비드는 고3의 그날까지 알지 못했다.</p><p>――링크를 떠나, 노을 진 학교 옥상에서 홀로 무릎을 끌어안고 울고 있던 오언.</p><p>분함에 어깨를 떨며 흘리는 그의 눈물을 본 순간, 벼락을 맞은 것처럼 전생의 모든 기억이 되살아난 것이다.</p><p>자신의 품 안에서 거품이 되어 사라져 간 사랑하는 사람의 모습이.</p><p>기억이 없는 오언이 놀라지 않도록, 줄곧 말하지 않고 끌어안아 온 열정과 애틋함.</p><p>그것이 무의식중에 비대해진 집착이 되어, 그를 누구에게도 넘기고 싶지 않다는 강렬한 독점욕이 되어 겉으로 드러나 버렸던 것이다.</p><p class="sb" aria-hidden="true"></p><p>데이비드는 조용히 주머니로 손을 뻗어, 전생의 기억과 함께 이제는 한시도 놓지 않고 지켜 온 그 낡은 오르골을 꺼냈다.</p><p class="sb" aria-hidden="true"></p><p>모서리가 조금 닳은 그것이 달빛을 받아 희미하게 빛났다.</p><p class="sb" aria-hidden="true"></p><p>처음으로 하나가 되어 서로의 체온을 나눈 오늘 밤이야말로, 그날부터 품고 다니던 이 오르골을 건네고 모든 것을 털어놓겠다고 마음먹었었다.</p><p class="sb" aria-hidden="true"></p><p>"……데이비드? 그거, 뭐야?"</p><p class="sb" aria-hidden="true"></p><p>데이비드는 아무 말 없이 천천히 태엽을 감았다.</p><p class="sb" aria-hidden="true"></p><p>찰롱……찰롱…… 하고, 조금 음이 어긋난 애달프면서도 맑게 투명한 그리운 선율이 밤바다 바람을 타고 울리기 시작했다.</p><p class="sb" aria-hidden="true"></p><p>그 순간, 오언의 몸이 움찔 굳었다.</p><p>음색이 귀에서 고막으로, 그리고 영혼 깊은 곳까지 스며들어 갔다.</p><p>시야가 급격히 일그러지고, 머릿속으로 터무니없는 기억의 탁류가 밀려들었다.</p><p class="sb" aria-hidden="true"></p><p>——어두운 바다. 거품이 되어 터져 가는 두 다리.</p><p>——"보고 싶어서, 미칠 것 같았어"라며 눈물을 흘리며 외치던 데이비드의 비명.</p><p>——차가운 작은 배 위에서, 마지막 기적을 빌려 겹쳤던 입술의 열기.</p><p>——"사랑해"라고 외치는 남자에게 "뭍으로 돌아가"라는 말을 남기고 사라져 간 그 새벽.</p><p class="sb" aria-hidden="true"></p><p>"아……윽, 으……"</p><p class="sb" aria-hidden="true"></p><p>오언은 머리를 부여잡고 숨을 삼켰다.</p><p>가슴속 깊은 곳이 터질 듯한 사랑스러움과 애틋함이 흘러넘치고, 굵은 눈물방울이 뚝뚝 눈에서 떨어졌다.</p><p>"오언……?"</p><p>흔들리는 눈동자로 돌아본 오언은, 눈앞에 있는 남자의 얼굴을 보았다.</p><p>빙상의 캡틴이자, 고등학교 4학년 연인이기도 하고, 한때 자신을 세상 무엇보다 사랑했으며 자신을 잃고 너덜너덜해진 채 바다를 떠돌았던 고고한 해적왕의 모습을.</p><p class="sb" aria-hidden="true"></p><p>"……데이, 비드……"</p><p class="sb" aria-hidden="true"></p><p>떨리는 목소리로 그 이름을 부른 순간, 오언은 눈물로 엉망이 된 얼굴 그대로 데이비드의 목에 힘껏 매달렸다.</p><p class="sb" aria-hidden="true"></p><p>"미안해……미안해, 데이비드……! 계속……혼자 두고, 기다리게 해서……미안해……!!"</p><p class="sb" aria-hidden="true"></p><p>흐느끼며 울음을 터뜨리는 오언.</p><p>데이비드의 눈에서도 수백 년 치의 뜨거운 눈물이 흘러넘쳤다.</p><p>이번에는 환영도, 꿈도 아니다.</p><p>오언을, 데이비드는 부러질 만큼 세게, 세게 그 품에 다시 끌어안았다.</p><p class="sb" aria-hidden="true"></p><p>"사과하지 마……사과하지 말아 줘, 오언."</p><p class="sb" aria-hidden="true"></p><p>등에 두른 커다란 손에 힘을 주며, 데이비드는 떨리는 목소리로 줄곧 가슴속 깊이 가둬 두었던 말을 토해 냈다.</p><p class="sb" aria-hidden="true"></p><p>"……드디어, 만났어. 계속 찾고 있었어……내게 돌아와 줘서, 고마워."</p><p class="sb" aria-hidden="true"></p><p>오언의 눈물에 젖은 뺨을 두 손으로 부드럽게 감싸 쥐고, 정면에서 똑바로 바라본다.</p><p>수백 년의 시간을 넘어, 지금 확실한 열기를 지닌 채 눈앞에 존재하는 사랑스러운 눈동자.</p><p class="sb" aria-hidden="true"></p><p>"사랑해, 오언. 전생에도, 지금도……앞으로도 영원히, 내 목숨 전부를 걸고 사랑해."</p><p>"으……데이비드……! 나도 사랑해……!"</p><p class="sb" aria-hidden="true"></p><p>넘치는 마음을 그대로 전하듯, 데이비드는 사랑스러움을 담아 오언의 떨리는 입술에 살며시 자신의 입술을 포갰다.</p><p>전생의 새벽, 그 한순간의 슬픈 입맞춤과는 다르다.</p><p>서로의 따뜻한 체온을 확인하며 다시는 떨어지지 않을 것을 맹세하는 듯한, 달콤하고 깊고, 한없이 다정한 키스.</p><p>겹친 입술에서 전해지는 열기에, 오언 또한 데이비드의 목덜미에 매달려 눈물을 흘리며 그 입맞춤을 받아들였다.</p><p>태엽이 다 풀려 오르골의 음색이 조용히 멎었다.</p><p>하지만 이제 두 사람의 시간을 멈출 것은 아무것도 없었다.</p><p class="sb" aria-hidden="true"></p><p>밤바다 위, 멈춰 있던 두 사람의 사랑이 진정한 의미로 지금 달리기 시작했다.</p></div>
+<nav class="pn" aria-label="Chapter navigation"><div><span>이전</span><a href="b-epilogue.html">엔딩 B 「슬픔」　에필로그</a></div><div><span>끝</span><a href="../../index.html#ko">목차로</a></div></nav>
+<footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br>무단 전재·재배포·번역 및 AI 학습 이용을 금지합니다.</footer></div></body></html>

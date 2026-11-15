@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Elegy of the Tides</title>
+<meta name="description" content="A merman prince, a pirate captain, a love that defies the ocean. AI-generated BL fan fiction of “ライバルからのラブレター” by Kuroshio Works.">
+<meta property="og:type" content="website"><meta property="og:title" content="Elegy of the Tides"><meta property="og:description" content="A merman prince. A pirate captain. A love that defies the ocean.">
+<meta property="og:image" content="https://kuroshioworks.github.io/elegy-of-the-tides/og.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://kuroshioworks.github.io/elegy-of-the-tides/og.jpg">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: cover art beside the story on wide screens, stacked on phones; one deep-sea page, language switch on top. */
+:root{
+  --abyss:#06122a; --deep:#0c1f3f; --foam:#ece4d0; --mist:#a9b6c9; --gold:#c9a869; --gold-dim:#8f7746; --line:rgba(201,168,105,.28);
+  --disp:"Cormorant Garamond","Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,serif;
+  --body:"Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 80% at 50% 0%,var(--deep),var(--abyss) 65%) fixed,var(--abyss);color:var(--foam);font-family:var(--body);font-size:16px;line-height:1.85;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px}
+:lang(zh) body,body:lang(zh){font-family:"Noto Serif SC",var(--body)}
+.wrap{max-width:1040px;margin:0 auto}
+.langs{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:28px}
+.langs button{font:inherit;font-size:14px;color:var(--mist);background:none;border:1px solid transparent;border-bottom-color:var(--line);padding:6px 14px;cursor:pointer;letter-spacing:.04em}
+.langs button:hover{color:var(--foam)}
+.langs button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-dim)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,64px);align-items:center}
+.cover{margin:0}
+.cover img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 6px rgba(201,168,105,.06)}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:0 0 6px;color:var(--foam);text-wrap:balance}
+.sub{font-family:var(--disp);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold);margin:0 0 22px}
+.syn{margin:0 0 26px;color:var(--foam);max-width:34em;text-wrap:pretty}
+.src{margin:-12px 0 26px;color:var(--mist);font-size:14px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;padding:11px 22px;text-decoration:none;border:1px solid var(--gold);color:var(--abyss);background:var(--gold);letter-spacing:.03em}
+.btn.alt{background:none;color:var(--gold)}
+a.btn:hover{filter:brightness(1.1)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:default;pointer-events:none}
+.wave{height:14px;margin:56px 0 40px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'><path d='M0 7 Q15 -1 30 7 T60 7 T90 7 T120 7' fill='none' stroke='%23c9a869' stroke-opacity='.55' stroke-width='1.2'/></svg>") repeat-x center}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,34px);margin:0 0 8px;color:var(--gold)}
+.note{color:var(--mist);font-size:14px;margin:0 0 28px;max-width:40em}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 48px}
+.grp h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp ol{list-style:none;margin:0;padding:0}
+.grp li{padding:11px 0;border-bottom:1px solid rgba(201,168,105,.12);min-width:0}
+.grp .lab{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase}
+.grp .ttl{font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.branch{display:inline-block;font-size:12px;color:var(--abyss);background:var(--gold);padding:1px 8px;margin-left:8px;letter-spacing:.06em;vertical-align:2px}
+footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter-spacing:.08em;line-height:1.7}
+footer b{color:var(--gold);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
+@media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+.ttl a{color:var(--foam);text-decoration:none;border-bottom:1px solid transparent}.ttl a:hover{color:var(--gold);border-color:var(--gold-dim)}.na{font-size:12px;color:var(--mist);font-style:normal;letter-spacing:.04em;margin-left:6px}
+</style>
+<meta name="robots" content="noai,noimageai"></head><body>
+<div class="wrap">
+  <nav class="langs" aria-label="Language" id="langs"></nav>
+  <section class="hero">
+    <figure class="cover"><img src="cover.jpg" alt="Elegy of the Tides cover: a merman prince looking up at a pirate captain on a ship's deck at sunset" width="860" height="1075"></figure>
+    <div>
+      <p class="kicker" id="kicker"></p>
+      <h1>Elegy of the Tides</h1>
+      <p class="sub" id="tag"></p>
+      <p class="syn" id="syn"></p>
+      <p class="src" id="src"></p>
+      <div class="cta" id="cta"></div>
+    </div>
+  </section>
+  <div class="wave" aria-hidden="true"></div>
+  <section>
+    <h2 id="h-toc"></h2>
+    <p class="note" id="note"></p>
+    <div class="toc" id="toc"></div>
+  </section>
+  <footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br><span id="rights"></span></footer>
+</div>
+<script>
+// Edit these links, then re-publish the page. Empty = the button shows as "coming soon".
+var LINKS = {
+  read: "read/ch1.html"
+};
+var T = {
+ ja:{name:"日本語",src:"原作：『ライバルからのラブレター』（非公式の二次創作です）",rights:"本作品の無断転載・再配布・翻訳・AI学習への利用を禁じます。",kicker:"AI生成二次創作BL小説　全6話",tag:"Some souls belong beyond the shore.",
+  syn:"岸辺を知らない人魚の王子と、黒い旗を掲げる海賊の船長。潮が二人を引き合わせた夜、かすかな旋律が運命を結びはじめる。海と陸の境を越える愛は、二人にすべてを差し出すことを求める。",
+  read:"日本語版を読む",en:"",na:"このサイトでは未掲載",soon:"準備中",toc:"目次",
+  note:"第四章が分岐点です。【愛】と【哀】、二つの結末があります。",
+  common:"本編",A:"結末A【愛】",B:"結末B【哀】",branch:"分岐",
+  ch:[["第一章","泡沫の王子と、黒の海賊"],["第二章","二人の名前と、見知らぬ世界"],["第三章","重ねる日々、届かぬ旋律"],["第四章","潮騒の挽歌"]],
+  a:[["エピローグ","三年の月日と、黄金の海"],["アフターストーリー","黄金の濡れ髪と、甘い蜜月"]],
+  b:[["エピローグ","夜明けの泡影と、最後の約束"],["アフターストーリー","あの日の約束と、巡りあう旋律"]]},
+ en:{name:"English",src:"Based on “ライバルからのラブレター” (an unofficial fan work)",rights:"No reproduction, redistribution, translation or use for AI training without permission.",kicker:"AI-generated BL fan fiction · 6 episodes",tag:"Some souls belong beyond the shore.",
+  syn:"A merman prince who has never known the shore. A pirate captain who sails under a black flag. On the night the tide brings them together, a fragile melody begins to bind their fates, and a love that crosses the line between sea and land asks everything of them.",
+  read:"Read the story",en:"",na:"Not posted here",soon:"Coming soon",toc:"Contents",
+  note:"Chapter Four is the branch point. The story has two endings: Love and Sorrow.",
+  common:"Main story",A:"Ending A · Love",B:"Ending B · Sorrow",branch:"Branch",
+  ch:[["Chapter One","The Prince of Foam and the Pirate in Black"],["Chapter Two","Two Names, and an Unknown World"],["Chapter Three","Days That Gathered, a Melody That Never Reached"],["Chapter Four","The Tide's Elegy"]],
+  a:[["Epilogue","Three Years, and a Golden Sea"],["After Story","Wet Golden Hair, and a Sweet Honeymoon"]],
+  b:[["Epilogue","The Foam-Shadow of Dawn, and a Final Promise"],["After Story","That Day's Promise, and the Melody That Found Its Way Back"]]},
+ zh:{name:"中文",src:"原作：《ライバルからのラブレター》（非官方同人作品）",rights:"未经许可，禁止转载、再分发、翻译或用于AI训练。",kicker:"AI生成同人BL小说　共6话",tag:"Some souls belong beyond the shore.",
+  syn:"从未见过海岸的人鱼王子，与扬着黑旗的海盗船长。潮水让两人相遇的那一夜，一段微弱的旋律开始缠绕起他们的命运。跨越海与陆之界的爱，将向他们索取一切。",
+  read:"阅读中文版",en:"",na:"本站未收录",soon:"即将公开",toc:"目录",
+  note:"第四章是分岐点。故事有两个结局：「爱」与「哀」。",
+  common:"正篇",A:"结局A「爱」",B:"结局B「哀」",branch:"分岐",
+  ch:[["第一章","泡沫的王子与黑衣海盗"],["第二章","两个名字，与陌生的世界"],["第三章","重叠的日子，传不到的旋律"],["第四章","潮声的挽歌"]],
+  a:[["尾声","三年时光与黄金之海"],["后日谈","金色湿发与甜蜜蜜月"]],
+  b:[["尾声","黎明的泡影与最后的约定"],["后日谈","那一天的约定与重逢的旋律"]]},
+ ko:{name:"한국어",src:"원작: 『ライバルからのラブレター』 (비공식 2차 창작)",rights:"무단 전재·재배포·번역 및 AI 학습 이용을 금지합니다.",kicker:"AI 생성 BL 2차 창작 소설 · 전 6화",tag:"Some souls belong beyond the shore.",
+  syn:"해안을 알지 못하는 인어 왕자와 검은 깃발을 건 해적 선장. 파도가 두 사람을 이어 준 밤, 희미한 선율이 두 운명을 엮기 시작한다. 바다와 육지의 경계를 넘는 사랑은 두 사람에게 모든 것을 요구한다.",
+  read:"한국어판 읽기",en:"",na:"이 사이트에는 미게재",soon:"준비 중",toc:"목차",
+  note:"제4장이 분기점입니다. 결말은 「사랑」과 「슬픔」 두 가지입니다.",
+  common:"본편",A:"엔딩 A 「사랑」",B:"엔딩 B 「슬픔」",branch:"분기",
+  ch:[["제1장","물거품의 왕자와 검은 해적"],["제2장","두 사람의 이름, 낯선 세계"],["제3장","겹쳐 가는 나날, 닿지 않는 선율"],["제4장","파도 소리의 만가"]],
+  a:[["에필로그","3년의 세월, 황금빛 바다"],["애프터 스토리","황금빛 젖은 머리카락과 달콤한 허니문"]],
+  b:[["에필로그","새벽의 물거품과 마지막 약속"],["애프터 스토리","그날의 약속과 다시 만난 선율"]]}
+};
+var order=["ja","en","zh","ko"], cur="en";
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function list(items,hrefs,na,soon){return '<ol>'+items.map(function(x,i){var h=hrefs[i];var tt=(h&&h!=="?")?'<a href="'+h+'">'+esc(x[1])+'</a>':esc(x[1])+' <em class="na">'+esc(h==="?"?soon:na)+'</em>';return '<li><span class="lab">'+esc(x[0])+'</span><span class="ttl">'+tt+'</span></li>'}).join('')+'</ol>'}
+var HH={"ja": {"c": ["read/ja/ch1.html", "read/ja/ch2.html", "read/ja/ch3.html", "read/ja/ch4.html"], "a": ["read/ja/a-epilogue.html", ""], "b": ["read/ja/b-epilogue.html", "read/ja/b-afterstory.html"]}, "en": {"c": ["read/ch1.html", "read/ch2.html", "read/ch3.html", "read/ch4.html"], "a": ["read/a-epilogue.html", ""], "b": ["read/b-epilogue.html", "read/b-afterstory.html"]}, "zh": {"c": ["read/zh/ch1.html", "read/zh/ch2.html", "read/zh/ch3.html", "read/zh/ch4.html"], "a": ["read/zh/a-epilogue.html", ""], "b": ["read/zh/b-epilogue.html", "read/zh/b-afterstory.html"]}, "ko": {"c": ["read/ko/ch1.html", "read/ko/ch2.html", "read/ko/ch3.html", "read/ko/ch4.html"], "a": ["read/ko/a-epilogue.html", ""], "b": ["read/ko/b-epilogue.html", "read/ko/b-afterstory.html"]}};
+function btn(cls,label,href,soon){
+  return href?'<a class="btn '+cls+'" href="'+esc(href)+'" target="_blank" rel="noopener">'+esc(label)+'</a>'
+             :'<span class="btn '+cls+'" aria-disabled="true">'+esc(label)+' ('+esc(soon)+')</span>';
+}
+function render(l){
+  cur=l; var t=T[l]; document.documentElement.lang=l;
+  document.getElementById("kicker").textContent=t.kicker;
+  document.getElementById("tag").textContent=t.tag;
+  document.getElementById("syn").textContent=t.syn;
+  document.getElementById("src").textContent=t.src;
+  document.getElementById("h-toc").textContent=t.toc;
+  document.getElementById("rights").textContent=t.rights;
+  document.getElementById("note").textContent=t.note+(t.en?" "+t.en:"");
+  document.getElementById("cta").innerHTML=btn("",t.read,(HH[l].c[0]&&HH[l].c[0]!=="?")?HH[l].c[0]:HH[l].c[1],t.soon);
+  document.getElementById("toc").innerHTML=
+    '<div class="grp"><h3>'+esc(t.common)+'</h3>'+list(t.ch,HH[l].c,t.na,t.soon)+'</div>'+
+    '<div><div class="grp"><h3>'+esc(t.A)+'</h3>'+list(t.a,HH[l].a,t.na,t.soon)+'</div><div class="grp" style="margin-top:28px"><h3>'+esc(t.B)+'</h3>'+list(t.b,HH[l].b,t.na,t.soon)+'</div></div>';
+  var nav=document.getElementById("langs");
+  nav.innerHTML=order.map(function(k){return '<button type="button" data-l="'+k+'" aria-pressed="'+(k===l)+'">'+esc(T[k].name)+'</button>'}).join('');
+  nav.querySelectorAll("button").forEach(function(b){b.onclick=function(){location.hash=b.dataset.l}});
+}
+function fromHash(){var h=(location.hash||"").slice(1);return T[h]?h:null}
+function start(){
+  var l=fromHash();
+  if(!l){var n=(navigator.language||"en").slice(0,2);l=T[n]?n:"en"}
+  render(l);
+}
+window.addEventListener("hashchange",function(){var l=fromHash();if(l)render(l)});
+start();
+</script>
+
+</body></html>

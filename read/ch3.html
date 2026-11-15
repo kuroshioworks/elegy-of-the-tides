@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Days That Gathered, a Melody That Never Reached · Elegy of the Tides</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: cover art beside the story on wide screens, stacked on phones; one deep-sea page, language switch on top. */
+:root{
+  --abyss:#06122a; --deep:#0c1f3f; --foam:#ece4d0; --mist:#a9b6c9; --gold:#c9a869; --gold-dim:#8f7746; --line:rgba(201,168,105,.28);
+  --disp:"Cormorant Garamond","Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,serif;
+  --body:"Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 80% at 50% 0%,var(--deep),var(--abyss) 65%) fixed,var(--abyss);color:var(--foam);font-family:var(--body);font-size:16px;line-height:1.85;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px}
+:lang(zh) body,body:lang(zh){font-family:"Noto Serif SC",var(--body)}
+.wrap{max-width:1040px;margin:0 auto}
+.langs{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:28px}
+.langs button{font:inherit;font-size:14px;color:var(--mist);background:none;border:1px solid transparent;border-bottom-color:var(--line);padding:6px 14px;cursor:pointer;letter-spacing:.04em}
+.langs button:hover{color:var(--foam)}
+.langs button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-dim)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,64px);align-items:center}
+.cover{margin:0}
+.cover img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 6px rgba(201,168,105,.06)}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:0 0 6px;color:var(--foam);text-wrap:balance}
+.sub{font-family:var(--disp);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold);margin:0 0 22px}
+.syn{margin:0 0 26px;color:var(--foam);max-width:34em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;padding:11px 22px;text-decoration:none;border:1px solid var(--gold);color:var(--abyss);background:var(--gold);letter-spacing:.03em}
+.btn.alt{background:none;color:var(--gold)}
+a.btn:hover{filter:brightness(1.1)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:default;pointer-events:none}
+.wave{height:14px;margin:56px 0 40px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'><path d='M0 7 Q15 -1 30 7 T60 7 T90 7 T120 7' fill='none' stroke='%23c9a869' stroke-opacity='.55' stroke-width='1.2'/></svg>") repeat-x center}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,34px);margin:0 0 8px;color:var(--gold)}
+.note{color:var(--mist);font-size:14px;margin:0 0 28px;max-width:40em}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 48px}
+.grp h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp ol{list-style:none;margin:0;padding:0}
+.grp li{padding:11px 0;border-bottom:1px solid rgba(201,168,105,.12);min-width:0}
+.grp .lab{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase}
+.grp .ttl{font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.branch{display:inline-block;font-size:12px;color:var(--abyss);background:var(--gold);padding:1px 8px;margin-left:8px;letter-spacing:.06em;vertical-align:2px}
+footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter-spacing:.08em;line-height:1.7}
+footer b{color:var(--gold);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
+@media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+.wrap{max-width:680px}
+.top{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;font-size:14px;margin-bottom:40px;align-items:baseline}
+.top a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.top a:hover,.pn a:hover{border-color:var(--gold)}
+.sw{display:flex;gap:14px;flex-wrap:wrap}
+.sw a{color:var(--mist);border:0}.sw a:hover{color:var(--gold)}.sw b{color:var(--gold);font-weight:600}
+.pn a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.lab2{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+h1{font-size:clamp(30px,6vw,44px);margin:0 0 36px;line-height:1.25}
+.txt p{margin:0 0 1.15em;font-size:18px;line-height:1.95;text-wrap:pretty;overflow-wrap:anywhere}
+.txt .sb{margin:0;height:1.85em}
+.pn{display:grid;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.pn span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+html[lang=ja] body,html[lang=ja] h1{font-family:"Noto Serif JP",serif}
+html[lang=zh] body,html[lang=zh] h1{font-family:"Noto Serif SC",serif}
+html[lang=ko] body,html[lang=ko] h1{font-family:"Noto Serif KR",serif}
+html[lang=zh] .txt p,html[lang=ja] .txt p{line-height:2.05}
+</style><meta name="robots" content="noai,noimageai"></head><body>
+<div class="wrap"><div class="top"><a href="../index.html#en">← Elegy of the Tides</a><nav class="sw" aria-label="Language"><a href="ja/ch3.html" hreflang="ja">日本語</a> <b>English</b> <a href="zh/ch3.html" hreflang="zh">中文</a> <a href="ko/ch3.html" hreflang="ko">한국어</a></nav></div>
+<p class="lab2">Chapter Three</p>
+<h1>Days That Gathered, a Melody That Never Reached</h1>
+<div class="txt"><p>Having left the port town behind, the Black Grouse spent the following weeks sailing from sea to sea, calling at one unfamiliar harbor town after another.</p><p>At the start of the journey, Owen had remained just as prickly as ever, snapping "you damn pirate" at David and bristling at every turn.</p><p>But as the weeks of shared time wore on, that stubborn heart slowly began to soften.</p><p class="sb" aria-hidden="true"></p><p>Every day, David patiently taught Owen about the human world.</p><p>How to use a knife and fork. How to dress. The history of life on land.</p><p>And beyond that—</p><p>"…Hey, David. What do you think you're doing…"</p><p>On the bed in the captain's cabin, Owen had been pulled into David's arms and had his lips claimed, deep and sudden. The moment he was released, he wiped his reddened mouth with his sleeve, protesting breathlessly.</p><p>He had been devoured until his breath caught, a thin silver thread still connecting their parted lips.</p><p>"…Replenishing the medicine."</p><p>David's voice was low and unshaken, his expression giving nothing away.</p><p>"To keep the effect of what I gave you, I need to supply you with the antidote's components directly from my mouth, at regular intervals. …Unless you'd rather go back to the sea right now and grow your fin again?"</p><p>"…! Damn it, this is basically holding a hostage…!"</p><p>Owen turned away with a huff, muttering curses under his breath.</p><p>But pure as he was, Owen had no way of knowing this was simply the "sweet excuse" David had invented.</p><p>"…Don't move. It's not enough yet."</p><p>"Wha—mmh…?!"</p><p>Giving him no chance to refuse, David's large hand drew the back of Owen's head in close, and their lips met again in a deep kiss.</p><p>Weeks aboard the ship had let Owen grow used to his human legs, but he still couldn't resist the sensations of skin and heat that came with his new human body.</p><p>David's thick fingers slipped beneath his clothes, slowly tracing up from the nape of his neck, over his collarbone, along the inside of his thigh.</p><p>"Ah… no… that feels… strange…!"</p><p>"It's proof your body is accepting the antidote."</p><p>"That's obviously a lie…! Ah…!"</p><p>His earlobe caught gently between David's teeth, a hot mark left along his throat, his defenseless body rocked by exquisitely deliberate touches.</p><p>Shielded behind the pretext of "for the medicine," the caresses teased him sweetly, always stopping just short.</p><p>He was never taken all the way, but Owen could do nothing but dig his own nails into David's back and cling to him.</p><p>"…Ah… David…"</p><p>"…Anything more than this waits until the day you're truly mine, in every sense."</p><p>Breathing hard, David pressed his lips gently to Owen's damp, flushed forehead.</p><p>Caught up again and again in the convenient excuse of "replenishing the medicine," Owen found, before he knew it, that he could no longer get through the night without the warmth of David's body.</p><p class="sb" aria-hidden="true"></p><p>Weeks passed, and Owen had come to spend his days out on the deck as well.</p><p>The gorilla-pirates who'd once made him snarl "stay away!" were now trading easy banter with him—"Hey, Owen! This fish is good!" "Get away from me, gorilla!"—like old friends.</p><p>While the crew worked away boisterously nearby, Owen would set the music box David had bought him in the port town carefully on his lap, letting its delicate melody ring out, note by note.</p><p class="sb" aria-hidden="true"></p><p>That day, the ship put in at a quiet white sand beach.</p><p>After weeks of practice, Owen had grown fully at ease walking on human legs, and he strolled beside David along the water's edge.</p><p>Suddenly, Owen shook free of David's hand and grinned mischievously.</p><p>"…Hey, Owen?"</p><p>"Watch this, David!"</p><p>Feeling the warmth of the sand beneath his toes, Owen kicked off across the beach with all his strength.</p><p>He ran, innocent and unguarded, cutting through the wind—the softness of the sand beneath his feet, the sea breeze brushing his cheeks, the sheer sensation of propelling himself freely across the ground on his own two legs.</p><p>"Whoa—! Look at this, David! I'm running! I'm actually running!!"</p><p>He turned back, his eyes shining, grinning like the sun itself.</p><p>It was a simple, unguarded joy he could never have known as a merman at the bottom of the sea—the freedom of being able to go anywhere at all on his own two feet.</p><p>"You'll trip."</p><p>Exasperated as he sounded, David's expression had softened into something gentle.</p><p>When Owen came running back and threw himself, too fast to stop, into David's chest, David caught him firmly in his arms and stroked his damp golden hair with something close to adoration.</p><p>"…The land's not bad at all."</p><p>"Is that so. Then wherever you want to run, I'll take you there."</p><p class="sb" aria-hidden="true"></p><p>Those peaceful days continued, until one night—</p><p>Moonlight spilled through the cabin window as Owen sat curled on David's lap, listening intently to the music box's melody.</p><p>"…This is such a pretty sound."</p><p>"Is it. Then that's all that matters."</p><p>David rested his chin on Owen's golden hair, holding him close with open affection. Owen leaned his back into that chest and, quite suddenly, murmured something.</p><p>"…Hey, David."</p><p>"What is it."</p><p>"Do you… want to hear me sing?"</p><p>David's eyes narrowed slightly.</p><p>Merfolk, it was said, possessed voices so beautiful they could drive sailors to madness.</p><p>"I'd like to hear you sing, if you're offering… but why? You haven't sung once, these past weeks."</p><p>"…It's not something I can do easily."</p><p>Owen gazed at the music box with eyes that held something wistful, almost otherworldly.</p><p>"A merman's song isn't just sound. It's our soul itself. Sing it carelessly, and it eats away at your life. …Especially an elegy—a song sung with everything, meant for just one person. That kind of song offers up the very core of your life to the one you're singing it for."</p><p>"…The core of your life, is it."</p><p>"Yeah. So merfolk only ever sing a song like that for someone who matters to them more than their own life. Even I never thought I'd get the chance to sing something like that."</p><p>Owen said this, then gave David's arm a light, embarrassed jab.</p><p>"So don't expect me to sing for you! Be grateful I'm even telling you this much, idiot!"</p><p>"…I see. Then you never have to sing it. Not for the rest of your life."</p><p>David pulled Owen's head firmly against him and pressed a deep kiss into his hair.</p><p>"You don't need to spend your life for my sake. All you have to do is live, right here beside me."</p><p>"…Mm. David."</p><p>For the first time in all their weeks together, it was Owen who leaned in and kissed David.</p><p>David's eyes widened for a moment, and then, his chest tightening with an almost unbearable tenderness, he claimed Owen's lips again—deep, and deeper still.</p><p>It was the eve of a storm too sweet, too happy, for either of them to see coming.</p><p>But even as they were wrapped in that happiness, outside the ship, the silence was at last about to break.</p><p>Thick clouds swallowed the moon, and the sea began to churn black and violent.</p><p>After weeks of pursuit, the merman knight Morgan had finally closed the distance—his presence, and the footsteps of a vast and coming storm, were drawing near at last.</p><p>The final night that would decide their fate together was quietly beginning to dawn.</p></div>
+<nav class="pn" aria-label="Chapter navigation"><div><span>Previous</span><a href="ch2.html">Chapter Two</a></div><div><span>Next</span><a href="ch4.html">Chapter Four</a></div></nav>
+<footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br>No reproduction, redistribution, translation or use for AI training without permission.</footer></div></body></html>

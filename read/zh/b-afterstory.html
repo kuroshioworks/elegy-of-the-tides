@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>那一天的约定与重逢的旋律 · Elegy of the Tides</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: cover art beside the story on wide screens, stacked on phones; one deep-sea page, language switch on top. */
+:root{
+  --abyss:#06122a; --deep:#0c1f3f; --foam:#ece4d0; --mist:#a9b6c9; --gold:#c9a869; --gold-dim:#8f7746; --line:rgba(201,168,105,.28);
+  --disp:"Cormorant Garamond","Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,serif;
+  --body:"Noto Serif JP","Noto Serif SC","Noto Serif KR",Georgia,"Times New Roman",serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(120% 80% at 50% 0%,var(--deep),var(--abyss) 65%) fixed,var(--abyss);color:var(--foam);font-family:var(--body);font-size:16px;line-height:1.85;padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px}
+:lang(zh) body,body:lang(zh){font-family:"Noto Serif SC",var(--body)}
+.wrap{max-width:1040px;margin:0 auto}
+.langs{display:flex;gap:6px;justify-content:flex-end;flex-wrap:wrap;margin-bottom:28px}
+.langs button{font:inherit;font-size:14px;color:var(--mist);background:none;border:1px solid transparent;border-bottom-color:var(--line);padding:6px 14px;cursor:pointer;letter-spacing:.04em}
+.langs button:hover{color:var(--foam)}
+.langs button[aria-pressed="true"]{color:var(--gold);border-color:var(--gold-dim)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.hero{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(24px,5vw,64px);align-items:center}
+.cover{margin:0}
+.cover img{display:block;width:100%;height:auto;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.55),0 0 0 6px rgba(201,168,105,.06)}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+h1{font-family:var(--disp);font-weight:600;font-size:clamp(40px,7vw,68px);line-height:1.02;margin:0 0 6px;color:var(--foam);text-wrap:balance}
+.sub{font-family:var(--disp);font-style:italic;font-size:clamp(19px,2.6vw,24px);color:var(--gold);margin:0 0 22px}
+.syn{margin:0 0 26px;color:var(--foam);max-width:34em;text-wrap:pretty}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;font:inherit;font-size:15px;padding:11px 22px;text-decoration:none;border:1px solid var(--gold);color:var(--abyss);background:var(--gold);letter-spacing:.03em}
+.btn.alt{background:none;color:var(--gold)}
+a.btn:hover{filter:brightness(1.1)}
+.btn[aria-disabled="true"]{opacity:.45;cursor:default;pointer-events:none}
+.wave{height:14px;margin:56px 0 40px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='14' viewBox='0 0 120 14'><path d='M0 7 Q15 -1 30 7 T60 7 T90 7 T120 7' fill='none' stroke='%23c9a869' stroke-opacity='.55' stroke-width='1.2'/></svg>") repeat-x center}
+h2{font-family:var(--disp);font-weight:600;font-size:clamp(26px,4vw,34px);margin:0 0 8px;color:var(--gold)}
+.note{color:var(--mist);font-size:14px;margin:0 0 28px;max-width:40em}
+.toc{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 48px}
+.grp h3{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600;margin:0 0 6px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.grp ol{list-style:none;margin:0;padding:0}
+.grp li{padding:11px 0;border-bottom:1px solid rgba(201,168,105,.12);min-width:0}
+.grp .lab{display:block;font-size:12.5px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase}
+.grp .ttl{font-size:17px;line-height:1.5;overflow-wrap:anywhere}
+.branch{display:inline-block;font-size:12px;color:var(--abyss);background:var(--gold);padding:1px 8px;margin-left:8px;letter-spacing:.06em;vertical-align:2px}
+footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter-spacing:.08em;line-height:1.7}
+footer b{color:var(--gold);font-weight:600}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
+@media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+
+.wrap{max-width:680px}
+.top{display:flex;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;font-size:14px;margin-bottom:40px;align-items:baseline}
+.top a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.top a:hover,.pn a:hover{border-color:var(--gold)}
+.sw{display:flex;gap:14px;flex-wrap:wrap}
+.sw a{color:var(--mist);border:0}.sw a:hover{color:var(--gold)}.sw b{color:var(--gold);font-weight:600}
+.pn a{color:var(--gold);text-decoration:none;border-bottom:1px solid var(--line)}
+.lab2{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:0 0 8px}
+h1{font-size:clamp(30px,6vw,44px);margin:0 0 36px;line-height:1.25}
+.txt p{margin:0 0 1.15em;font-size:18px;line-height:1.95;text-wrap:pretty;overflow-wrap:anywhere}
+.txt .sb{margin:0;height:1.85em}
+.pn{display:grid;gap:14px;margin-top:56px;padding-top:24px;border-top:1px solid var(--line);font-size:15px}
+.pn span{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mist)}
+html[lang=ja] body,html[lang=ja] h1{font-family:"Noto Serif JP",serif}
+html[lang=zh] body,html[lang=zh] h1{font-family:"Noto Serif SC",serif}
+html[lang=ko] body,html[lang=ko] h1{font-family:"Noto Serif KR",serif}
+html[lang=zh] .txt p,html[lang=ja] .txt p{line-height:2.05}
+</style><meta name="robots" content="noai,noimageai"></head><body>
+<div class="wrap"><div class="top"><a href="../../index.html#zh">← Elegy of the Tides</a><nav class="sw" aria-label="Language"><a href="../ja/b-afterstory.html" hreflang="ja">日本語</a> <a href="../b-afterstory.html" hreflang="en">English</a> <b>中文</b> <a href="../ko/b-afterstory.html" hreflang="ko">한국어</a></nav></div>
+<p class="lab2">结局B「哀」　后日谈</p>
+<h1>那一天的约定与重逢的旋律</h1>
+<div class="txt"><p>从余热未散的客轮套房里，悄悄溜出来的阳台。</p><p>劈开夜海前行的船激起白色的浪花，还有那无边无际、冰凉又舒适的海风，温柔地抚过两人泛红的肌肤。</p><p>欧文披着大卫那件偏大的衬衫，手肘搭在栏杆上，仰望着夜空。</p><p>颈侧与锁骨上留下的红痕，被月光映得淡淡浮现。</p><p>激烈热情的余韵，以及近乎酸楚的怜爱。</p><p>身体深处残留的酥麻热意，让欧文轻轻吐出一口气。</p><p class="sb" aria-hidden="true"></p><p>“……怎么说呢。和你像这样看海，感觉怪怪的。”</p><p class="sb" aria-hidden="true"></p><p>从身后走近的大卫，轻轻揽住了欧文纤细的腰。</p><p>背后传来大卫真切的体温与心跳。</p><p>大卫把脸埋进欧文的颈窝，像是在确认一件易碎的珍宝一般，深深吸了一口气。</p><p class="sb" aria-hidden="true"></p><p>“怪怪的……是指？”</p><p>“嗯……说不太清楚。就是觉得，从很久很久以前开始，我就这样抱着你，一起看着海。”</p><p class="sb" aria-hidden="true"></p><p>欧文为掩饰害羞轻轻笑了笑，把自己的手覆在大卫交叠的手上。</p><p>大卫的心脏猛地重重一跳。</p><p>从小时候起，不知为何就被吸引、怎么也放不下的老家那只旧八音盒。</p><p>每次望着那只磨损的木盒，心底都会被一种莫名的焦躁刺痛，而这个原因，大卫直到高三的那一天才知道。</p><p>——离开了冰场，在夕阳染红的学校天台上，独自抱着膝盖哭泣的欧文。</p><p>看到他因不甘而颤抖着肩膀流下的眼泪的瞬间，如遭雷击般，前世的所有记忆都苏醒了。</p><p>那个在自己怀中化作泡沫消失的心爱之人的面容。</p><p>为了不吓到没有记忆的欧文，一直没有说出口、独自背负着的热情与酸楚。</p><p>它在无意识间膨胀成了执念，化作不想把他交给任何人的强烈占有欲，显露了出来。</p><p class="sb" aria-hidden="true"></p><p>大卫静静地把手伸进口袋，取出了那只与前世的记忆一同、如今片刻不离地守护至今的、陈旧的八音盒。</p><p class="sb" aria-hidden="true"></p><p>稍稍磨损了边角的它，在月光下泛着淡淡的光。</p><p class="sb" aria-hidden="true"></p><p>今晚，两人第一次合而为一，彼此分享了体温，所以他早已决定，就在今晚把这只从那天起一直带在身边的八音盒交给他，说出一切。</p><p class="sb" aria-hidden="true"></p><p>“……大卫？那是什么？”</p><p class="sb" aria-hidden="true"></p><p>大卫什么也没说，缓缓地拧动发条。</p><p class="sb" aria-hidden="true"></p><p>叮咚……叮咚……，略微走音、哀伤却清澈、令人怀念的旋律，乘着夜晚的海风响了起来。</p><p class="sb" aria-hidden="true"></p><p>那一瞬间，欧文的身体猛地僵住了。</p><p>音色从耳朵传到鼓膜，再渗进灵魂深处。</p><p>视野急剧扭曲，脑海中涌来了汹涌如浊流般的庞大记忆。</p><p class="sb" aria-hidden="true"></p><p>——漆黑的海。化作泡沫破碎的两条腿。</p><p>——大卫流着泪喊出的那声哀号：“我想见你，想见到快要发疯了。”</p><p>——在冰冷的小舟上，借来最后的奇迹交叠的唇的热度。</p><p>——对喊着“我爱你”的男人，留下一句“回陆地去”便消失的那个黎明。</p><p class="sb" aria-hidden="true"></p><p>“啊……呃……！”</p><p class="sb" aria-hidden="true"></p><p>欧文按住头，倒吸了一口气。</p><p>胸口深处涌出几乎要裂开的怜爱与酸楚，大颗大颗的泪珠扑簌簌地从眼中滚落。</p><p>“欧文……？”</p><p>欧文带着摇曳的眼眸回过头，看向眼前男人的脸。</p><p>那是冰上的队长，是高四学生的恋人，也是曾把自己爱得胜过世上一切、失去自己后伤痕累累仍在海上徘徊不休的、孤高的海盗王的身影。</p><p class="sb" aria-hidden="true"></p><p>“……大、卫……”</p><p class="sb" aria-hidden="true"></p><p>用颤抖的声音唤出那个名字的瞬间，欧文满脸泪水糊成一团，拼尽全力抱住了大卫的脖子。</p><p class="sb" aria-hidden="true"></p><p>“对不起……对不起啊，大卫……！一直……把你一个人丢下，让你等了那么久……对不起……！！”</p><p class="sb" aria-hidden="true"></p><p>抽噎着哭起来的欧文。</p><p>大卫的眼里也涌出了积攒几百年的滚烫泪水。</p><p>这一次，不是幻觉，也不是梦。</p><p>大卫把欧文紧紧、紧紧地回抱进怀里，紧得几乎要将他折断。</p><p class="sb" aria-hidden="true"></p><p>“别道歉……不要道歉，欧文。”</p><p class="sb" aria-hidden="true"></p><p>大卫加重了环在他背后的大手的力道，用颤抖的声音，倾吐出一直一直封存在心底的话语。</p><p class="sb" aria-hidden="true"></p><p>“……终于，见到你了。我一直在找你……谢谢你，回到我身边。”</p><p class="sb" aria-hidden="true"></p><p>他用双手温柔地捧住欧文被泪水沾湿的脸颊，从正面直直地凝视着他。</p><p>跨越了几百年的时光，此刻带着确切的热度存在于眼前的、心爱的眼眸。</p><p class="sb" aria-hidden="true"></p><p>“我爱你，欧文。前世也好，现在也好……往后也永远，我愿倾尽我生命的全部去爱你。”</p><p>“嗯……大卫……！我也爱你……！”</p><p class="sb" aria-hidden="true"></p><p>仿佛要把满溢的心意原样传达，大卫满怀爱意，将自己的唇轻轻覆上欧文颤抖的唇。</p><p>不同于前世黎明时那转瞬即逝的悲伤之吻。</p><p>那是确认着彼此温暖的体温，像是在发誓再也不分开般，甜蜜、深长、无比温柔的吻。</p><p>从相贴的双唇传来的热度，让欧文也紧紧抱住大卫的脖颈，流着泪接受了这个吻。</p><p>发条转到了尽头，八音盒的旋律静静停下。</p><p>可是，再也没有任何东西能让两人的时间停下了。</p><p class="sb" aria-hidden="true"></p><p>夜海之上，停滞的两人的爱恋，从这一刻起，才真正地奔跑了起来。</p></div>
+<nav class="pn" aria-label="Chapter navigation"><div><span>上一章</span><a href="b-epilogue.html">结局B「哀」　尾声</a></div><div><span>完</span><a href="../../index.html#zh">返回目录</a></div></nav>
+<footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br>未经许可，禁止转载、再分发、翻译或用于AI训练。</footer></div></body></html>
