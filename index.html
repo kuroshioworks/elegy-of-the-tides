@@ -51,7 +51,7 @@ footer{margin-top:64px;text-align:center;color:var(--mist);font-size:13px;letter
 footer b{color:var(--gold);font-weight:600}
 @media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
 @media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
-.ttl a{color:var(--foam);text-decoration:none;border-bottom:1px solid transparent}.ttl a:hover{color:var(--gold);border-color:var(--gold-dim)}.na{font-size:12px;color:var(--mist);font-style:normal;letter-spacing:.04em;margin-left:6px}
+.ttl a{color:var(--foam);text-decoration:none;border-bottom:1px solid transparent}.ttl a:hover{color:var(--gold);border-color:var(--gold-dim)}.na{font-size:12px;color:var(--mist);font-style:normal;letter-spacing:.04em;margin-left:6px}.na.ext{display:block;margin:2px 0 0;line-height:1.6}
 </style>
 <meta name="robots" content="noai,noimageai"></head><body>
 <div class="wrap">
@@ -81,7 +81,7 @@ var LINKS = {
   read: "read/ch1.html"
 };
 var T = {
- ja:{name:"日本語",src:"原作：『ライバルからのラブレター』（非公式の二次創作です）",rights:"本作品の無断転載・再配布・翻訳・AI学習への利用を禁じます。",kicker:"AI生成二次創作BL小説　全6話",tag:"Some souls belong beyond the shore.",
+ ja:{name:"日本語",ext:"pixivで読む ↗ ／ R-18・閲覧にはpixivへのログインが必要です",src:"原作：『ライバルからのラブレター』（非公式の二次創作です）",rights:"本作品の無断転載・再配布・翻訳・AI学習への利用を禁じます。",kicker:"AI生成二次創作BL小説　全6話",tag:"Some souls belong beyond the shore.",
   syn:"岸辺を知らない人魚の王子と、黒い旗を掲げる海賊の船長。潮が二人を引き合わせた夜、かすかな旋律が運命を結びはじめる。海と陸の境を越える愛は、二人にすべてを差し出すことを求める。",
   read:"日本語版を読む",en:"",na:"このサイトでは未掲載",soon:"準備中",toc:"目次",
   note:"第四章が分岐点です。【愛】と【哀】、二つの結末があります。",
@@ -89,7 +89,7 @@ var T = {
   ch:[["第一章","泡沫の王子と、黒の海賊"],["第二章","二人の名前と、見知らぬ世界"],["第三章","重ねる日々、届かぬ旋律"],["第四章","潮騒の挽歌"]],
   a:[["エピローグ","三年の月日と、黄金の海"],["アフターストーリー","黄金の濡れ髪と、甘い蜜月"]],
   b:[["エピローグ","夜明けの泡影と、最後の約束"],["アフターストーリー","あの日の約束と、巡りあう旋律"]]},
- en:{name:"English",src:"Based on “ライバルからのラブレター” (an unofficial fan work)",rights:"No reproduction, redistribution, translation or use for AI training without permission.",kicker:"AI-generated BL fan fiction · 6 episodes",tag:"Some souls belong beyond the shore.",
+ en:{name:"English",ext:"Read on pixiv ↗ · R-18 · pixiv login required · Japanese only (use your browser's translate feature)",src:"Based on “ライバルからのラブレター” (an unofficial fan work)",rights:"No reproduction, redistribution, translation or use for AI training without permission.",kicker:"AI-generated BL fan fiction · 6 episodes",tag:"Some souls belong beyond the shore.",
   syn:"A merman prince who has never known the shore. A pirate captain who sails under a black flag. On the night the tide brings them together, a fragile melody begins to bind their fates, and a love that crosses the line between sea and land asks everything of them.",
   read:"Read the story",en:"",na:"Not posted here",soon:"Coming soon",toc:"Contents",
   note:"Chapter Four is the branch point. The story has two endings: Love and Sorrow.",
@@ -97,7 +97,7 @@ var T = {
   ch:[["Chapter One","The Prince of Foam and the Pirate in Black"],["Chapter Two","Two Names, and an Unknown World"],["Chapter Three","Days That Gathered, a Melody That Never Reached"],["Chapter Four","The Tide's Elegy"]],
   a:[["Epilogue","Three Years, and a Golden Sea"],["After Story","Wet Golden Hair, and a Sweet Honeymoon"]],
   b:[["Epilogue","The Foam-Shadow of Dawn, and a Final Promise"],["After Story","That Day's Promise, and the Melody That Found Its Way Back"]]},
- zh:{name:"中文",src:"原作：《ライバルからのラブレター》（非官方同人作品）",rights:"未经许可，禁止转载、再分发、翻译或用于AI训练。",kicker:"AI生成同人BL小说　共6话",tag:"Some souls belong beyond the shore.",
+ zh:{name:"中文",ext:"在pixiv阅读 ↗ · R-18 · 需登录pixiv后阅读 · 仅日文（可使用浏览器的翻译功能）",src:"原作：《ライバルからのラブレター》（非官方同人作品）",rights:"未经许可，禁止转载、再分发、翻译或用于AI训练。",kicker:"AI生成同人BL小说　共6话",tag:"Some souls belong beyond the shore.",
   syn:"从未见过海岸的人鱼王子，与扬着黑旗的海盗船长。潮水让两人相遇的那一夜，一段微弱的旋律开始缠绕起他们的命运。跨越海与陆之界的爱，将向他们索取一切。",
   read:"阅读中文版",en:"",na:"本站未收录",soon:"即将公开",toc:"目录",
   note:"第四章是分岐点。故事有两个结局：「爱」与「哀」。",
@@ -105,7 +105,7 @@ var T = {
   ch:[["第一章","泡沫的王子与黑衣海盗"],["第二章","两个名字，与陌生的世界"],["第三章","重叠的日子，传不到的旋律"],["第四章","潮声的挽歌"]],
   a:[["尾声","三年时光与黄金之海"],["后日谈","金色湿发与甜蜜蜜月"]],
   b:[["尾声","黎明的泡影与最后的约定"],["后日谈","那一天的约定与重逢的旋律"]]},
- ko:{name:"한국어",src:"원작: 『ライバルからのラブレター』 (비공식 2차 창작)",rights:"무단 전재·재배포·번역 및 AI 학습 이용을 금지합니다.",kicker:"AI 생성 BL 2차 창작 소설 · 전 6화",tag:"Some souls belong beyond the shore.",
+ ko:{name:"한국어",ext:"pixiv에서 읽기 ↗ · R-18 · pixiv 로그인 필요 · 일본어만 제공 (브라우저 번역 기능을 이용해 주세요)",src:"원작: 『ライバルからのラブレター』 (비공식 2차 창작)",rights:"무단 전재·재배포·번역 및 AI 학습 이용을 금지합니다.",kicker:"AI 생성 BL 2차 창작 소설 · 전 6화",tag:"Some souls belong beyond the shore.",
   syn:"해안을 알지 못하는 인어 왕자와 검은 깃발을 건 해적 선장. 파도가 두 사람을 이어 준 밤, 희미한 선율이 두 운명을 엮기 시작한다. 바다와 육지의 경계를 넘는 사랑은 두 사람에게 모든 것을 요구한다.",
   read:"한국어판 읽기",en:"",na:"이 사이트에는 미게재",soon:"준비 중",toc:"목차",
   note:"제4장이 분기점입니다. 결말은 「사랑」과 「슬픔」 두 가지입니다.",
@@ -116,8 +116,8 @@ var T = {
 };
 var order=["ja","en","zh","ko"], cur="en";
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function list(items,hrefs,na,soon){return '<ol>'+items.map(function(x,i){var h=hrefs[i];var tt=(h&&h!=="?")?'<a href="'+h+'">'+esc(x[1])+'</a>':esc(x[1])+' <em class="na">'+esc(h==="?"?soon:na)+'</em>';return '<li><span class="lab">'+esc(x[0])+'</span><span class="ttl">'+tt+'</span></li>'}).join('')+'</ol>'}
-var HH={"ja": {"c": ["read/ja/ch1.html", "read/ja/ch2.html", "read/ja/ch3.html", "read/ja/ch4.html"], "a": ["read/ja/a-epilogue.html", ""], "b": ["read/ja/b-epilogue.html", "read/ja/b-afterstory.html"]}, "en": {"c": ["read/ch1.html", "read/ch2.html", "read/ch3.html", "read/ch4.html"], "a": ["read/a-epilogue.html", ""], "b": ["read/b-epilogue.html", "read/b-afterstory.html"]}, "zh": {"c": ["read/zh/ch1.html", "read/zh/ch2.html", "read/zh/ch3.html", "read/zh/ch4.html"], "a": ["read/zh/a-epilogue.html", ""], "b": ["read/zh/b-epilogue.html", "read/zh/b-afterstory.html"]}, "ko": {"c": ["read/ko/ch1.html", "read/ko/ch2.html", "read/ko/ch3.html", "read/ko/ch4.html"], "a": ["read/ko/a-epilogue.html", ""], "b": ["read/ko/b-epilogue.html", "read/ko/b-afterstory.html"]}};
+function list(items,hrefs,na,soon){return '<ol>'+items.map(function(x,i){var h=hrefs[i];var tt=/^https?:/.test(h)?'<a href="'+esc(h)+'" target="_blank" rel="noopener">'+esc(x[1])+'</a><em class="na ext">'+esc(T[cur].ext)+'</em>':(h&&h!=="?")?'<a href="'+h+'">'+esc(x[1])+'</a>':esc(x[1])+' <em class="na">'+esc(h==="?"?soon:na)+'</em>';return '<li><span class="lab">'+esc(x[0])+'</span><span class="ttl">'+tt+'</span></li>'}).join('')+'</ol>'}
+var HH={"ja": {"c": ["read/ja/ch1.html", "read/ja/ch2.html", "read/ja/ch3.html", "read/ja/ch4.html"], "a": ["read/ja/a-epilogue.html", "https://www.pixiv.net/novel/show.php?id=28800342"], "b": ["read/ja/b-epilogue.html", "read/ja/b-afterstory.html"]}, "en": {"c": ["read/ch1.html", "read/ch2.html", "read/ch3.html", "read/ch4.html"], "a": ["read/a-epilogue.html", "https://www.pixiv.net/novel/show.php?id=28800342"], "b": ["read/b-epilogue.html", "read/b-afterstory.html"]}, "zh": {"c": ["read/zh/ch1.html", "read/zh/ch2.html", "read/zh/ch3.html", "read/zh/ch4.html"], "a": ["read/zh/a-epilogue.html", "https://www.pixiv.net/novel/show.php?id=28800342"], "b": ["read/zh/b-epilogue.html", "read/zh/b-afterstory.html"]}, "ko": {"c": ["read/ko/ch1.html", "read/ko/ch2.html", "read/ko/ch3.html", "read/ko/ch4.html"], "a": ["read/ko/a-epilogue.html", "https://www.pixiv.net/novel/show.php?id=28800342"], "b": ["read/ko/b-epilogue.html", "read/ko/b-afterstory.html"]}};
 function btn(cls,label,href,soon){
   return href?'<a class="btn '+cls+'" href="'+esc(href)+'" target="_blank" rel="noopener">'+esc(label)+'</a>'
              :'<span class="btn '+cls+'" aria-disabled="true">'+esc(label)+' ('+esc(soon)+')</span>';
