@@ -52,7 +52,7 @@ footer b{color:var(--gold);font-weight:600}
 @media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
 @media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
 .ttl a{color:var(--foam);text-decoration:none;border-bottom:1px solid transparent}.ttl a:hover{color:var(--gold);border-color:var(--gold-dim)}.na{font-size:12px;color:var(--mist);font-style:normal;letter-spacing:.04em;margin-left:6px}.na.ext{display:block;margin:2px 0 0;line-height:1.6}
-.wv{margin:36px 0 0;text-align:left}.wv a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;color:var(--gold);text-decoration:none;font-size:17px;line-height:1}.wv a:hover{border-color:var(--gold);background:rgba(201,168,105,.08)}
+.wv{margin:36px 0 0;text-align:left;display:flex;align-items:center;gap:10px}.hrt{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;background:none;color:var(--gold);font:inherit;font-size:17px;line-height:1;cursor:pointer}.hrt:hover{border-color:var(--gold);background:rgba(201,168,105,.08)}.hrt.on{border-color:var(--gold);cursor:default}.ty{font-size:13px;color:var(--mist)}
 </style>
 <meta name="robots" content="noai,noimageai"></head><body>
 <div class="wrap">
@@ -74,7 +74,7 @@ footer b{color:var(--gold);font-weight:600}
     <p class="note" id="note"></p>
     <div class="toc" id="toc"></div>
   </section>
-  <p class="wv"><a id="wave" data-goatcounter-click="heart/top" href="https://wavebox.me/wave/3rn4up04ygw2lf9y/" target="_blank" rel="noopener">♡</a></p>
+  <p class="wv"><button type="button" class="hrt" id="wave" data-h="heart/top" aria-pressed="false">♡</button><span class="ty" aria-live="polite"></span></p>
   <footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br><span id="rights"></span></footer>
 </div>
 <script>
@@ -83,7 +83,7 @@ var LINKS = {
   read: "read/ch1.html"
 };
 var T = {
- ja:{name:"日本語",wave:"絵文字で応援する",ext:"pixivで読む ↗ ／ R-18・閲覧にはpixivへのログインが必要です",src:"原作：『ライバルからのラブレター』（非公式の二次創作です）",rights:"本作品の無断転載・再配布・翻訳・AI学習への利用を禁じます。",kicker:"二次創作AI生成BL小説　全6話",tag:"Some souls belong beyond the shore.",
+ ja:{name:"日本語",wave:"いいね",ty:"ありがとうございます！",ext:"pixivで読む ↗ ／ R-18・閲覧にはpixivへのログインが必要です",src:"原作：『ライバルからのラブレター』（非公式の二次創作です）",rights:"本作品の無断転載・再配布・翻訳・AI学習への利用を禁じます。",kicker:"二次創作AI生成BL小説　全6話",tag:"Some souls belong beyond the shore.",
   syn:"岸辺を知らない人魚の王子と、黒い旗を掲げる海賊の船長。潮が二人を引き合わせた夜、かすかな旋律が運命を結びはじめる。海と陸の境を越える愛は、二人にすべてを差し出すことを求める。",
   read:"日本語版を読む",en:"",na:"このサイトでは未掲載",soon:"準備中",toc:"目次",
   note:"第四章が分岐点です。【愛】と【哀】、二つの結末があります。",
@@ -91,7 +91,7 @@ var T = {
   ch:[["第一章","泡沫の王子と、黒の海賊"],["第二章","二人の名前と、見知らぬ世界"],["第三章","重ねる日々、届かぬ旋律"],["第四章","潮騒の挽歌"]],
   a:[["エピローグ","三年の月日と、黄金の海"],["アフターストーリー","黄金の濡れ髪と、甘い蜜月"]],
   b:[["エピローグ","夜明けの泡影と、最後の約束"],["アフターストーリー","あの日の約束と、巡りあう旋律"]]},
- en:{name:"English",wave:"Send a reaction",ext:"Read on pixiv ↗ · R-18 · pixiv login required · Japanese only (use your browser's translate feature)",src:"Based on “ライバルからのラブレター” (an unofficial fan work)",rights:"No reproduction, redistribution, translation or use for AI training without permission.",kicker:"AI-generated BL fan fiction · 6 episodes",tag:"Some souls belong beyond the shore.",
+ en:{name:"English",wave:"Like",ty:"Thank you!",ext:"Read on pixiv ↗ · R-18 · pixiv login required · Japanese only (use your browser's translate feature)",src:"Based on “ライバルからのラブレター” (an unofficial fan work)",rights:"No reproduction, redistribution, translation or use for AI training without permission.",kicker:"AI-generated BL fan fiction · 6 episodes",tag:"Some souls belong beyond the shore.",
   syn:"A merman prince who has never known the shore. A pirate captain who sails under a black flag. On the night the tide brings them together, a fragile melody begins to bind their fates, and a love that crosses the line between sea and land asks everything of them.",
   read:"Read the story",en:"",na:"Not posted here",soon:"Coming soon",toc:"Contents",
   note:"Chapter Four is the branch point. The story has two endings: Love and Sorrow.",
@@ -99,7 +99,7 @@ var T = {
   ch:[["Chapter One","The Prince of Foam and the Pirate in Black"],["Chapter Two","Two Names, and an Unknown World"],["Chapter Three","Days That Gathered, a Melody That Never Reached"],["Chapter Four","The Tide's Elegy"]],
   a:[["Epilogue","Three Years, and a Golden Sea"],["After Story","Wet Golden Hair, and a Sweet Honeymoon"]],
   b:[["Epilogue","The Foam-Shadow of Dawn, and a Final Promise"],["After Story","That Day's Promise, and the Melody That Found Its Way Back"]]},
- zh:{name:"中文",wave:"用表情为作者应援",ext:"在pixiv阅读 ↗ · R-18 · 需登录pixiv后阅读 · 仅日文（可使用浏览器的翻译功能）",src:"原作：《ライバルからのラブレター》（非官方同人作品）",rights:"未经许可，禁止转载、再分发、翻译或用于AI训练。",kicker:"同人AI生成BL小说　共6话",tag:"Some souls belong beyond the shore.",
+ zh:{name:"中文",wave:"点赞",ty:"谢谢支持！",ext:"在pixiv阅读 ↗ · R-18 · 需登录pixiv后阅读 · 仅日文（可使用浏览器的翻译功能）",src:"原作：《ライバルからのラブレター》（非官方同人作品）",rights:"未经许可，禁止转载、再分发、翻译或用于AI训练。",kicker:"同人AI生成BL小说　共6话",tag:"Some souls belong beyond the shore.",
   syn:"从未见过海岸的人鱼王子，与扬着黑旗的海盗船长。潮水让两人相遇的那一夜，一段微弱的旋律开始缠绕起他们的命运。跨越海与陆之界的爱，将向他们索取一切。",
   read:"阅读中文版",en:"",na:"本站未收录",soon:"即将公开",toc:"目录",
   note:"第四章是分岐点。故事有两个结局：「爱」与「哀」。",
@@ -107,7 +107,7 @@ var T = {
   ch:[["第一章","泡沫的王子与黑衣海盗"],["第二章","两个名字，与陌生的世界"],["第三章","重叠的日子，传不到的旋律"],["第四章","潮声的挽歌"]],
   a:[["尾声","三年时光与黄金之海"],["后日谈","金色湿发与甜蜜蜜月"]],
   b:[["尾声","黎明的泡影与最后的约定"],["后日谈","那一天的约定与重逢的旋律"]]},
- ko:{name:"한국어",wave:"이모지로 응원하기",ext:"pixiv에서 읽기 ↗ · R-18 · pixiv 로그인 필요 · 일본어만 제공 (브라우저 번역 기능을 이용해 주세요)",src:"원작: 『ライバルからのラブレター』 (비공식 2차 창작)",rights:"무단 전재·재배포·번역 및 AI 학습 이용을 금지합니다.",kicker:"2차 창작 AI 생성 BL 소설 · 전 6화",tag:"Some souls belong beyond the shore.",
+ ko:{name:"한국어",wave:"좋아요",ty:"감사합니다!",ext:"pixiv에서 읽기 ↗ · R-18 · pixiv 로그인 필요 · 일본어만 제공 (브라우저 번역 기능을 이용해 주세요)",src:"원작: 『ライバルからのラブレター』 (비공식 2차 창작)",rights:"무단 전재·재배포·번역 및 AI 학습 이용을 금지합니다.",kicker:"2차 창작 AI 생성 BL 소설 · 전 6화",tag:"Some souls belong beyond the shore.",
   syn:"해안을 알지 못하는 인어 왕자와 검은 깃발을 건 해적 선장. 파도가 두 사람을 이어 준 밤, 희미한 선율이 두 운명을 엮기 시작한다. 바다와 육지의 경계를 넘는 사랑은 두 사람에게 모든 것을 요구한다.",
   read:"한국어판 읽기",en:"",na:"이 사이트에는 미게재",soon:"준비 중",toc:"목차",
   note:"제4장이 분기점입니다. 결말은 「사랑」과 「슬픔」 두 가지입니다.",
@@ -132,7 +132,7 @@ function render(l){
   document.getElementById("src").textContent=t.src;
   document.getElementById("h-toc").textContent=t.toc;
   document.getElementById("rights").textContent=t.rights;
-  var wv=document.getElementById("wave");wv.title=t.wave;wv.setAttribute("aria-label",t.wave);
+  var wv=document.getElementById("wave");wv.title=t.wave;wv.setAttribute("aria-label",t.wave);wv.dataset.t=t.ty;if(wv.nextElementSibling.textContent)wv.nextElementSibling.textContent=t.ty;
   document.getElementById("note").textContent=t.note+(t.en?" "+t.en:"");
   document.getElementById("cta").innerHTML=btn("",t.read,(HH[l].c[0]&&HH[l].c[0]!=="?")?HH[l].c[0]:HH[l].c[1],t.soon);
   document.getElementById("toc").innerHTML=
@@ -152,5 +152,13 @@ window.addEventListener("hashchange",function(){var l=fromHash();if(l)render(l)}
 start();
 </script>
 
+<script>
+document.querySelectorAll(".hrt").forEach(function(b){var k="hrt:"+b.dataset.h;
+function on(){b.textContent="♥";b.classList.add("on");b.setAttribute("aria-pressed","true")}
+try{if(localStorage.getItem(k)==="1")on()}catch(e){}
+b.addEventListener("click",function(){if(b.classList.contains("on"))return;on();b.nextElementSibling.textContent=b.dataset.t;
+try{localStorage.setItem(k,"1")}catch(e){}
+try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:b.dataset.h,title:b.dataset.h,event:true})}catch(e){}});});
+</script>
 <script data-goatcounter="https://kuroshioworks.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body></html>
