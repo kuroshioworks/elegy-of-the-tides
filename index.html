@@ -52,7 +52,7 @@ footer b{color:var(--gold);font-weight:600}
 @media (max-width:760px){.hero{grid-template-columns:1fr}.cover{max-width:420px;margin-inline:auto}.langs{justify-content:center}}
 @media (prefers-reduced-motion:no-preference){.cover img{animation:rise .9s ease-out both}@keyframes rise{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}}
 .ttl a{color:var(--foam);text-decoration:none;border-bottom:1px solid transparent}.ttl a:hover{color:var(--gold);border-color:var(--gold-dim)}.na{font-size:12px;color:var(--mist);font-style:normal;letter-spacing:.04em;margin-left:6px}.na.ext{display:block;margin:2px 0 0;line-height:1.6}
-.wv{margin:36px 0 0;text-align:left;display:flex;align-items:center;gap:10px}.hrt{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;background:none;color:var(--gold);font:inherit;font-size:17px;line-height:1;cursor:pointer}.hrt:hover{border-color:var(--gold);background:rgba(201,168,105,.08)}.hrt.on{border-color:var(--gold);cursor:default}.ty{font-size:13px;color:var(--mist)}
+.wv{margin:36px 0 0;text-align:left;display:flex;align-items:center;gap:10px}.hrt{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;padding:0;border:1px solid var(--line);border-radius:50%;background:none;color:var(--gold);font:inherit;font-size:17px;line-height:1;cursor:pointer}.hrt:hover{border-color:var(--gold);background:rgba(201,168,105,.08)}.hrt.on{border-color:var(--gold);cursor:default}.ty{font-size:13px;color:var(--mist)}.hc{font-size:14px;color:var(--gold);font-variant-numeric:tabular-nums}.hc:empty{display:none}
 </style>
 <meta name="robots" content="noai,noimageai"></head><body>
 <div class="wrap">
@@ -74,7 +74,7 @@ footer b{color:var(--gold);font-weight:600}
     <p class="note" id="note"></p>
     <div class="toc" id="toc"></div>
   </section>
-  <p class="wv"><button type="button" class="hrt" id="wave" data-h="heart/top" aria-pressed="false">♡</button><span class="ty" aria-live="polite"></span></p>
+  <p class="wv"><button type="button" class="hrt" id="wave" data-h="heart/top" aria-pressed="false">♡</button><span class="hc"></span><span class="ty" aria-live="polite"></span></p>
   <footer>© 2026 <b>Kuroshio Works</b>. All rights reserved.<br><span id="rights"></span></footer>
 </div>
 <script>
@@ -132,7 +132,7 @@ function render(l){
   document.getElementById("src").textContent=t.src;
   document.getElementById("h-toc").textContent=t.toc;
   document.getElementById("rights").textContent=t.rights;
-  var wv=document.getElementById("wave");wv.title=t.wave;wv.setAttribute("aria-label",t.wave);wv.dataset.t=t.ty;if(wv.nextElementSibling.textContent)wv.nextElementSibling.textContent=t.ty;
+  var wv=document.getElementById("wave");wv.title=t.wave;wv.setAttribute("aria-label",t.wave);wv.dataset.t=t.ty;var ty=wv.parentNode.querySelector(".ty");if(ty.textContent)ty.textContent=t.ty;
   document.getElementById("note").textContent=t.note+(t.en?" "+t.en:"");
   document.getElementById("cta").innerHTML=btn("",t.read,(HH[l].c[0]&&HH[l].c[0]!=="?")?HH[l].c[0]:HH[l].c[1],t.soon);
   document.getElementById("toc").innerHTML=
@@ -156,7 +156,10 @@ start();
 document.querySelectorAll(".hrt").forEach(function(b){var k="hrt:"+b.dataset.h;
 function on(){b.textContent="♥";b.classList.add("on");b.setAttribute("aria-pressed","true")}
 try{if(localStorage.getItem(k)==="1")on()}catch(e){}
-b.addEventListener("click",function(){if(b.classList.contains("on"))return;on();b.nextElementSibling.textContent=b.dataset.t;
+var hc=b.parentNode.querySelector(".hc"),n=0;
+function show(){hc.textContent=n>0?String(n):""}
+try{fetch("https://kuroshioworks.goatcounter.com/counter/"+encodeURIComponent(b.dataset.h)+".json").then(function(r){return r.ok?r.json():null}).then(function(d){if(!d)return;var c=parseInt(String(d.count).replace(/[^0-9]/g,""),10);if(c>n){n=c;show()}}).catch(function(){})}catch(e){}
+b.addEventListener("click",function(){if(b.classList.contains("on"))return;on();n++;show();b.parentNode.querySelector(".ty").textContent=b.dataset.t;
 try{localStorage.setItem(k,"1")}catch(e){}
 try{if(window.goatcounter&&window.goatcounter.count)window.goatcounter.count({path:b.dataset.h,title:b.dataset.h,event:true})}catch(e){}});});
 </script>
