@@ -1,9 +1,9 @@
-# Elegy of the Tides
+# ELEGY OF THE TIDES
 
 A merman prince, a pirate captain, a love that defies the ocean.
 An AI-generated BL fan fiction (derivative work) of “ライバルからのラブレター” by Kuroshio Works.
 
-人魚の王子と海賊の船長の、海と陸の境を越える愛を描いた『ライバルからのラブレター』のAI生成二次創作BL小説です。
+人魚の王子と海賊の船長の、海と陸の境を越える愛を描いた『ライバルからのラブレター』の二次創作AI生成BL小説です。
 
 **Read online / オンラインで読む:** https://kuroshioworks.github.io/elegy-of-the-tides/
 
